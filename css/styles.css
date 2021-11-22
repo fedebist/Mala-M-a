@@ -11294,3 +11294,18 @@ textarea.form-control-lg {
   display: flex;
   text-align: center;
 }
+
+.carrito{
+  background-color: #798177;
+}
+
+.tituloCarrito{
+  color: white;
+  text-align: center;
+  font-size: 32px;
+}
+
+#añadido{
+  text-align: center;
+  color: #46FF0D;
+}
