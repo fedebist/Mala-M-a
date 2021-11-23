@@ -3,7 +3,7 @@ function añadir(){
     let añadido = document.getElementById('añadido');
 
     let confirmacion = document.createElement('p');
-    confirmacion.innerHTML = `<p>Nombre: ${nombre.value}</p>
+    confirmacion.innerHTML = `<p>Nombre: ${nombre.innerText}</p>
     <h5>Se añadió al carrito</h5>`;
     añadido.appendChild(confirmacion);
 }
