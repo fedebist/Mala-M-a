@@ -68,9 +68,9 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder" id='nombreProducto'>Remera básica negra</h5>
+                                    <h5 class="fw-bolder nombreProducto" >Remera básica negra</h5>
                                     <!-- Product price-->
-                                    $2000
+                                    <div class="precio">$2000</div>
                                 </div>
                                 <div class="btn-group">
                                     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -86,7 +86,9 @@
                                   </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="añadir()" href="./index.html#carrito">Añadir al carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="añadir();precios()" href="./index.html#carrito">Añadir al carrito</a></div>
+                              <button onclick='showMenu()'>Precios</button>
+                              <div class='mostrarMenu'></div>
                             </div>
                         </div>
                     </div>
@@ -100,13 +102,13 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder" id='nombreProducto'>Remera básica blanca</h5>
+                                    <h5 class="fw-bolder" class='nombreProducto'>Remera básica blanca</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                     </div>
                                     <!-- Product price-->
 
-                                    $2000
+                                    <div class="precio">$2000</div>
                                 </div>
                                 <div class="btn-group">
                                     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -136,10 +138,10 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder" id='nombreProducto'>Sweater white</h5>
+                                    <h5 class="fw-bolder" class='nombreProducto'>Sweater white</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$2899</span>
-                                    $2199
+                                    <div class="precio">$2199</div>
                                 </div>
                                 <div class="btn-group">
                                     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -169,7 +171,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder" id='nombreProducto'>Jean mom</h5>
+                                    <h5 class="fw-bolder" class='nombreProducto'>Jean mom</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                      <!--    <div class="bi-star-fill"></div>
@@ -179,7 +181,7 @@
                                         <div class="bi-star-fill"></div> -->
                                     </div>
                                     <!-- Product price-->
-                                    $3000
+                                    <div class="precio">$3000</div>
                                 </div>
                                 <div class="btn-group">
                                     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -209,10 +211,10 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder" id='nombreProducto'>Hoodie Campera</h5>
+                                    <h5 class="fw-bolder" class='nombreProducto'>Hoodie Campera</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$13200</span>
-                                    $10200
+                                    <div class="precio">$10200</div>
                                 </div>
                                 <div class="btn-group">
                                     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -240,9 +242,9 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder" id='nombreProducto'>Pantalón Black Summer</h5>
+                                    <h5 class="fw-bolder" class='nombreProducto'>Pantalón Black Summer</h5>
                                     <!-- Product price-->
-                                    $3600
+                                   <div class="precio">$3600</div>
                                 </div>
                                 <div class="btn-group">
                                     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -349,7 +351,7 @@
          <div class='tituloCarrito' id='carrito'>Carrito</div>
          <div id='añadido'>
          <img src='./Multimedia/baseline_delete_forever_black_24dp.png' onclick='borrar()'></div>
-
+         <div class='preciosCarrito'></div>
 
 
 
@@ -371,7 +373,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
- <!--   <script src='./js-coder/variablesGenerales.js'></script>
+   <!-- <script src='./js-coder/variablesGenerales.js'></script>
    <script src='./js-coder/funcionesGenerales.js'></script>
    <script src='./js-coder/main.js'></script> -->
    <script src='./js-coder/DOM.js'></script>

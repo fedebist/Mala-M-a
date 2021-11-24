@@ -1,6 +1,7 @@
 function añadir(){
-    let nombre = document.getElementById('nombreProducto');
+    let nombre = document.getElementsByClassName('nombreProducto');
     let añadido = document.getElementById('añadido');
+    console.log(nombre);
 
     let confirmacion = document.createElement('p');
     confirmacion.innerHTML = `<p>Nombre: ${nombre.innerText}</p>
@@ -11,4 +12,18 @@ function añadir(){
 function borrar(){
     let añadido = document.getElementById('añadido');
     añadido.removeChild(añadido.lastChild);
+}
+
+function precios(){
+    let precio = document.getElementsByClassName('precio');
+    let precioCarrito = document.getElementsByClassName('preciosCarrito');
+
+    let precioPantalla = document.createElement ('p');
+    precioPantalla.innerHTML = `<p>Precio: ${precio.innerText}</p>`
+    precioCarrito.appendChild(precioPantalla);
+    
+
+
+
+
 }
