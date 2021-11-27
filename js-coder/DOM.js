@@ -1,5 +1,5 @@
 function añadir(){
-    let nombre = document.getElementsByClassName('h5.fw-bolder.nombreProducto');
+    let nombre = document.getElementsByClassName('nombreProducto');
     let añadido = document.getElementById('añadido');
     console.log(nombre);
 

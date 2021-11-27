@@ -26,17 +26,17 @@ const producto4 = new productosCarrito('4', 'Jean mom', 3000, 20)
 const producto5 = new productosCarrito('5', 'Campera', 10200, 10)
 const producto6 = new productosCarrito('6', 'Pantalón black summer', 3600, 10)
 
-const lista = [producto1.precio, producto2.precio, producto3.precio, producto4.precio, producto5.precio, producto6.precio]
+/* const lista = [producto1.precio, producto2.precio, producto3.precio, producto4.precio, producto5.precio, producto6.precio]
 alert('La lista de precios desordenada es: ' + lista)
 
 lista.sort((a, b) =>{
-     if (a < b){ /* valor a va antes que el b */
+     if (a < b){  valor a va antes que el b 
           return -1;
      }
-     if (a > b){ /* valor b va antes que el a */
+     if (a > b){  valor b va antes que el a
           return 1;
      }
      return 0;
 }); 
 
-alert('La lista de precios ordenada de menor a mayor es: ' + lista + '\n');
+alert('La lista de precios ordenada de menor a mayor es: ' + lista + '\n'); */
