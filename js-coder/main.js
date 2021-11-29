@@ -1,4 +1,4 @@
-alert('Bienvenido a tu shopping online de confianza');
+alert('Bienvenido al catálogo de Mala Mía');
  
 do{ /* opcion que el usuario va a elegir. Break cuando ponga salir*/
    let option = showMenu();
