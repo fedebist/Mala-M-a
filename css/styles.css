@@ -11309,3 +11309,19 @@ textarea.form-control-lg {
   text-align: center;
   color: #46FF0D;
 }
+
+.tituloCarritoNav{
+  font-size: 180%;
+  border-bottom: 2px solid black;
+}
+
+.resumenCompra{
+  width: 300px;
+  height: 500px;
+  background-color: grey;
+  text-align: center;
+}
+
+.text-decoration-none{
+  color: black;
+}

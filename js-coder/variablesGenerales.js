@@ -11,7 +11,36 @@ let productos = [
      {id:'6', name:'Pantalón black summer', precio:3600, stock : 10},
     ]
 
+    /* let nombreCarrito = document.getElementsByClassName('compras');
+    let listado = document.createElement('p');
+    listado.innerHTML = `${nombre.innerText}`;
+    nombreCarrito.appendChild(listado); */
     
+    console.log(productos);
+
+let añadirProductos = document.getElementsByClassName('añadirCarrito');
+añadirProductos.addEventListener('click', e=>{
+     e.preventDefault();
+     let listado = document.getElementsByClassName('compras');
+
+for (let producto of productos){
+     listado.innerHTML+= `<div>
+     <h4>${producto.name}</h4>
+     <p>$ ${producto.precio}</p>
+     </div>`
+}
+})
+
+/* let listado = document.getElementsByClassName('compras');
+
+for (let producto of productos){
+     listado.innerHTML+= `<div>
+     <h4>${producto.name}</h4>
+     <p>$ ${producto.precio}</p>
+     </div>`
+} */
+
+
 function productosCarrito (id, name, precio, stock){
      this.id = id;
      this.name= name,
