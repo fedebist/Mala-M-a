@@ -111,8 +111,8 @@ catalogo.addEventListener('click', (e)=>{
         let suma = document.createElement('p');
         let precio = document.getElementById('precio');
         console.log(precio.textContent);
-        suma.innerHTML = ``
-        total.appendChild(suma)
+        suma.innerHTML = ``;
+        total.appendChild(suma);
  
 })
 

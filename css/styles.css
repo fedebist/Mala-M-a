@@ -11325,3 +11325,20 @@ textarea.form-control-lg {
 .text-decoration-none{
   color: black;
 }
+
+.tituloLogin{
+  font-size: 170%;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.descripcionLogin{
+  font-size: 130%;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+#email{
+  text-align: center;
+}
