@@ -11295,8 +11295,8 @@ textarea.form-control-lg {
   text-align: center;
 }
 
-.carrito{
-  background-color: #798177;
+#carritoCompras{
+  background-color: white;
 }
 
 .tituloCarrito{
@@ -11307,18 +11307,18 @@ textarea.form-control-lg {
 
 #añadido{
   text-align: center;
-  color: #46FF0D;
 }
 
 .tituloCarritoNav{
   font-size: 180%;
   border-bottom: 2px solid black;
+  text-align: center;
 }
 
 .resumenCompra{
   width: 300px;
   height: 500px;
-  background-color: grey;
+  background-color: #FFFFE5;
   text-align: center;
 }
 

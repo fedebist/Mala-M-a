@@ -14,4 +14,8 @@ function darkMode(){
       document.body.style.background = 'beige';
       let carro = document.getElementsByClassName('carrito');
       carrito.style.background = '#798177';
+      
+      let carrito = document.querySelector('.tituloCarritoNav')
+      carrito.style.background = 'red';
   }
+
