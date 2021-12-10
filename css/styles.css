@@ -11342,3 +11342,10 @@ textarea.form-control-lg {
 #email{
   text-align: center;
 }
+
+.close{
+  color: green;
+  font-size: 110%;
+  font-family: 'Source Serif Pro', serif;
+}
+

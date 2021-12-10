@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Mala Mía Madariaga: catálogo. Vestí a la moda con las prendas del verano 2022" />
         <meta name='keywords' content='Mala mía, madariaga, catálogo, pinamar, ropa, verano 2022'>
-        <meta name="author" content="" />
         <title>Mala Mía Madariaga - Catálogo</title>
         <!-- cdn bs -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,6 +13,9 @@
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body></body>
@@ -107,9 +109,30 @@
                                   </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a href='./index.html#carritoCompras'><button class="añadirCarrito">Añadir al carrito</button></a></div>
-                              <div class='mostrarMenu'></div>
-                            </div>
+                                <div class="text-center">
+                                    <!-- MODAL -->
+                                    <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModal'>Añadir al carrito</button>
+                                    <div class="modal" id='ventanaModal' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title">Remera básica negra</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                              <p>El producto se agregó al carrito</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <!-- Botón de compra -->
+                                              <a href="./index.html"><button type="button" class="close" data-dismiss='modal' aria-label='Close'>Volver a la tienda</button></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      </div>
+                                      </div>
                         </div>
                     </div>
                     <div class="col mb-5 col-sm-12 col-12">
@@ -144,7 +167,28 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><button class="añadirCarritoBlanca" href="./index.html#carritoCompras">Añadir al carrito</button></div>
+                                <div class="text-center">
+                                    <!-- MODAL -->
+                                    <button class="btn btn-success añadirCarritoBlanca" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalBlanca'>Añadir al carrito</button>
+                                    <div class="modal" id='ventanaModalBlanca' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title">Remera básica blanca</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                              <p>El producto se agregó al carrito</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="./index.html"><button type="button" class="close" data-dismiss='modal' aria-label='Close'>Volver a la tienda</button></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      </div>
                             </div>
                         </div>
                     </div>
@@ -179,7 +223,28 @@
                             
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><button class="añadirCarritoSweater" href="./index.html#carritoCompras">Añadir al carrito</button></div>
+                                <div class="text-center">
+                                     <!-- MODAL -->
+                                     <button class="btn btn-success añadirCarritoSweater" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalSweater'>Añadir al carrito</button>
+                                     <div class="modal" id='ventanaModalSweater' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                         <div class="modal-dialog" role="document">
+                                           <div class="modal-content">
+                                             <div class="modal-header">
+                                               <h5 class="modal-title">Sweater white</h5>
+                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                 <span aria-hidden="true">&times;</span>
+                                               </button>
+                                             </div>
+                                             <div class="modal-body">
+                                               <p>El producto se agregó al carrito</p>
+                                             </div>
+                                             <div class="modal-footer">
+                                               <a href="./index.html"><button type="button" class="close" data-dismiss='modal' aria-label='Close'>Volver a la tienda</button></a>
+                                             </div>
+                                           </div>
+                             </div>
+                         </div>
+                     </div>
                             </div>
                         </div>
                     </div>
@@ -217,7 +282,28 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><button class="añadirCarritoJean" href="./index.html#carrito">Añadir al carrito</button></div>
+                                <div class="text-center">
+                                     <!-- MODAL -->
+                                     <button class="btn btn-success añadirCarritoJean" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalJean'>Añadir al carrito</button>
+                                     <div class="modal" id='ventanaModalJean' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                         <div class="modal-dialog" role="document">
+                                           <div class="modal-content">
+                                             <div class="modal-header">
+                                               <h5 class="modal-title">Jean mom</h5>
+                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                 <span aria-hidden="true">&times;</span>
+                                               </button>
+                                             </div>
+                                             <div class="modal-body">
+                                               <p>El producto se agregó al carrito</p>
+                                             </div>
+                                             <div class="modal-footer">
+                                               <a href="./index.html"><button type="button" class="close" data-dismiss='modal' aria-label='Close'>Volver a la tienda</button></a>
+                                             </div>
+                                           </div>
+                             </div>
+                         </div>
+                     </div>
                             </div>
                         </div>
                     </div>
@@ -250,7 +336,28 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><button class="añadirCarritoCampera" href="./index.html#carrito">Añadir al carrito</button></div>
+                                <div class="text-center">
+                                     <!-- MODAL -->
+                                     <button class="btn btn-success añadirCarritoCampera" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalCampera'>Añadir al carrito</button>
+                                     <div class="modal" id='ventanaModalCampera' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                         <div class="modal-dialog" role="document">
+                                           <div class="modal-content">
+                                             <div class="modal-header">
+                                               <h5 class="modal-title">Hoodie Campera</h5>
+                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                 <span aria-hidden="true">&times;</span>
+                                               </button>
+                                             </div>
+                                             <div class="modal-body">
+                                               <p>El producto se agregó al carrito</p>
+                                             </div>
+                                             <div class="modal-footer">
+                                               <a href="./index.html"><button type="button" class="close" data-dismiss='modal' aria-label='Close'>Volver a la tienda</button></a>
+                                             </div>
+                                           </div>
+                                         </div>
+                                       </div>
+                                       </div>
                             </div>
                         </div>
                     </div>
@@ -280,7 +387,27 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><button class='añadirCarritoPantalon'>Añadir al carrito</div></button>
+                                <div class="text-center">  <!-- MODAL -->
+                                    <button class="btn btn-success añadirCarritoPantalon" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalPantalon'>Añadir al carrito</button>
+                                    <div class="modal" id='ventanaModalPantalon' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title">Pantalón Black Summer</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                              <p>El producto se agregó al carrito</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="./index.html"><button type="button" class="close" data-dismiss='modal' aria-label='Close'>Volver a la tienda</button></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
