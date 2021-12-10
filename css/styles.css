@@ -11349,3 +11349,21 @@ textarea.form-control-lg {
   font-family: 'Source Serif Pro', serif;
 }
 
+.navNavBar {
+  border-bottom: 10px solid black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(pink), to(#F2C8FC));
+  background-image: linear-gradient(to top, black, beige);
+  border-radius: 50px;
+}

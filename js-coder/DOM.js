@@ -42,13 +42,17 @@ catalogo.addEventListener('click', (e)=>{
     console.log(e.target.classList.contains('añadirCarrito'));
     if(e.target.classList.contains('añadirCarrito')){
         let confirmacion = document.createElement('p');
+        let confirmacionNav = document.createElement('p');
         let añadido = document.getElementById('añadido');
+        let añadidoNav = document.getElementById('añadidoNav');
         let nombre = document.getElementById('nombreProducto');
         let precio = document.getElementById('precio');
         confirmacion.innerHTML = `<p>Nombre: ${nombre.textContent}</p>
         <h5>Se añadió al carrito</h5>
         Precio: ${precio.innerText}`;
         añadido.appendChild(confirmacion);
+        confirmacionNav.innerHTML = `${nombre.textContent}</p>`;
+        añadidoNav.appendChild(confirmacionNav);
         console.log(nombre.textContent);
     }
     else if(e.target.classList.contains('añadirCarritoJean')){
