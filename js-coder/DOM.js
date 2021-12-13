@@ -12,6 +12,8 @@
 function borrar(){
     let añadido = document.getElementById('añadido');
     añadido.removeChild(añadido.lastChild);
+    let total = document.getElementById('resumenCompra');
+    total.removeChild(total.lastChild);
 }
 
 function precios(){
@@ -34,7 +36,7 @@ botonCompra.addEventListener('click', (e)=>{
 
 /* ------------------------ Carro -------------------------- */
 
- let catalogo = document.getElementById('tienda')
+/*  let catalogo = document.getElementById('tienda')
 
 catalogo.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -110,7 +112,7 @@ catalogo.addEventListener('click', (e)=>{
          añadido.appendChild(confirmacion);
          console.log(nombre.textContent);
         }
-        /* Precios */
+
         let total = document.getElementById('total');
         let suma = document.createElement('p');
         let precio = document.getElementById('precio');
@@ -122,12 +124,20 @@ catalogo.addEventListener('click', (e)=>{
 
 let total = document.getElementById('total');
 let suma = document.createElement('p');
-suma.innerHTML = `0`
+suma.innerHTML = `0`  */
  
+/* -------- Carrito ------------------------------------------- */
+
+
+
+
+
+
+
 
 /* -------------------------------------------------------------- */
 
-/*  let botonesCompra = document.querySelectorAll('.añadirCarrito');
+ let botonesCompra = document.querySelectorAll('.añadirCarrito');
 let carrito = [];
 
 for(let boton of botonesCompra){
@@ -138,8 +148,41 @@ for(let boton of botonesCompra){
 function agregarCarrito(e){
     console.log(e.target);
     let hijo = e.target;
-    let padre = hijo.parentNode.parentNode;
+    let padre = hijo.parentNode.parentNode.parentNode;
     let titulo = padre.querySelector('h5').textContent;
+    let precio = padre.querySelector('#precio').textContent;
+    let imagen = padre.querySelector('img').src;
+    let talles = $('talles');
+    console.log(talles);
+    console.log (precio);
     console.log(padre);
-    console.log(titulo);  
-}  */
+    console.log(titulo);
+    console.log(imagen);
+    let span = $('#contador')
+    let contador = 0
+    if(e.target.classList.contains('añadirCarrito')){
+        contador ++;
+        span.textContent = contador;
+        console.log('Estás sumando');
+    }
+
+
+    $('#añadido').append(`${titulo} ${precio}  <img src='${imagen}'> \n`);
+    $('#resumenCompra').append(`${precio}`);
+
+    $('#añadidoNav').append(`${titulo} ${precio} <img src='${imagen}'>\n`)
+    
+} 
+
+/* Talles */
+
+let botonesTalle = $('#botonTalles')
+
+for(let botonTalle of botonesTalle){
+    botonTalle.addEventListener('click', talles)
+}
+
+function talles(e){
+    console.log(e.target.value);
+    console.log(e.target.textContent);
+}

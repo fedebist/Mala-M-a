@@ -1,19 +1,24 @@
 function darkMode(){
     document.body.style.background = 'black';
+
+    /* Color título carrito */
+    $('#tituloCarritoNav').css('color', 'black');
+     
+    /* Fondo carrito */
+    $('#carritoCompras').css('background-color', 'grey');
     
     let navBar = document.getElementsByTagName('nav');
     navBar.style.background = 'black';
   
-    let carrito = document.getElementById('carritoCompras');
-    carrito.style.background = 'black';
   }
   
   function lightMode(){
       document.body.style.background = 'beige';
-      let carro = document.getElementsByClassName('carrito');
-      carrito.style.background = '#798177';
-      
-      let carrito = document.querySelector('.tituloCarritoNav')
-      carrito.style.background = 'red';
+    
+    /* Color título carrito */
+    $('#tituloCarritoNav').css('color', 'black');
+     
+    /* Fondo carrito */
+    $('#carritoCompras').css('background-color', 'white');
   }
 
