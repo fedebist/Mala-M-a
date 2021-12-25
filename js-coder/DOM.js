@@ -137,7 +137,7 @@ suma.innerHTML = `0`  */
 
 /* -------------------------------------------------------------- */
 
- let botonesCompra = document.querySelectorAll('.añadirCarrito');
+let botonesCompra = document.querySelectorAll('.añadirCarrito');
 let carrito = [];
 
 for(let boton of botonesCompra){
@@ -151,21 +151,15 @@ function agregarCarrito(e){
     let padre = hijo.parentNode.parentNode.parentNode;
     let titulo = padre.querySelector('h5').textContent;
     let precio = padre.querySelector('#precio').textContent;
+    let precioParse = parseInt(precio);
     let imagen = padre.querySelector('img').src;
     let talles = $('talles');
     console.log(talles);
-    console.log (precio);
+    console.log(precioParse);
     console.log(padre);
     console.log(titulo);
     console.log(imagen);
-    let span = $('#contador')
-    let contador = 0
-    if(e.target.classList.contains('añadirCarrito')){
-        contador ++;
-        span.textContent = contador;
-        console.log('Estás sumando');
-    }
-
+    
 
     $('#añadido').append(`${titulo} ${precio}  <img src='${imagen}'> \n`);
     $('#resumenCompra').append(`${precio}`);
@@ -173,6 +167,35 @@ function agregarCarrito(e){
     $('#añadidoNav').append(`${titulo} ${precio} <img src='${imagen}'>\n`)
     
 } 
+
+/* CONTADOR */
+
+let container = document.querySelector('.containerContador')
+let span = $('#contador');
+let contador = 0;
+
+container.addEventListener('click', (e) =>{
+     if(e.target.classList.contains('.añadirCarrito')){
+        contador ++;
+        span.textContent = contador
+        console.log('Estás sumandooo');
+    }
+    });
+
+/* Precio */
+
+let precio = $('#precio')
+let precioParse = parseInt(precio);
+let total = $('#resumenCompra');
+
+precioParse.addEventListener('change', sumarPrecio);
+
+function sumarPrecio(){
+    let totalPrecio = precioParse + precioParse;
+    $('#resumenCompra').append(`${totalPrecio}`);
+    console.log(totalPrecio);
+}
+
 
 /* Talles */
 
@@ -186,3 +209,5 @@ function talles(e){
     console.log(e.target.value);
     console.log(e.target.textContent);
 }
+
+

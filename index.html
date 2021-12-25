@@ -43,6 +43,7 @@
                         </li>
                       </ul>
                         </button>
+                        <div class="containerContador">
                         <div class="dropdown">
                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            Carrito <span id='contador'>0</span>
@@ -79,8 +80,7 @@
                               </tbody>
                             </table></a>
                           </div>
-                        </div>
-                        
+                        </div> 
                     </form>
                 </div>
             </div>
@@ -116,6 +116,7 @@
 
     <!-- Section-->
         <section id="tienda">
+          <div class='basicaNeg'>
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5 col-sm-12 col-12">
@@ -128,8 +129,12 @@
                                     <!-- Product name-->
                                     <h5 id="nombreProducto" >Remera básica negra</h5>
                                     <!-- Product price-->
-                                    <div id="precio">$2000</div>
+                                    <div id="precio">2000</div>
                                 </div>
+                                <div class='botonesVer'>
+                                <button class='verMasBasica'>Ver más</button></div>
+                                <div class='descripcionProductoBasica'>Las remeras básicas no pueden faltar en tu armario</div>
+                                <div class="botonesTalles">
                                 <div class="btn-group">
                                   <select name='' id='botonTalles'>
                                     <option value='S'>S</option>
@@ -137,6 +142,7 @@
                                     <option value ='L'>L</option>
                                     <option value ='XL'>XL</option>
                                 </select>
+                                </div>
                                   </div>
                                   </div>
                             <!-- Product actions-->
@@ -144,11 +150,11 @@
                                 <div class="text-center">
                                     <!-- MODAL -->
                                     <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModal'>Añadir al carrito</button>
-                                    <div class="modal" id='ventanaModal' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                    <div class="modal fade" id='ventanaModal' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
                                         <div class="modal-dialog" role="document">
                                           <div class="modal-content">
                                             <div class="modal-header">
-                                              
+                                              <h5 class="modal-title">Remera básica negra</h5>
                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                               </button>
@@ -183,15 +189,20 @@
                                     </div>
                                     <!-- Product price-->
 
-                                    <div id="precio">$2000</div>
+                                    <div id="precio">2000</div>
                                 </div>
-                                <div class="btn-group">
+                                <div class='botonesVer'>
+                                  <button class='verMasBasica'>Ver más</button></div>
+                                  <div class='descripcionProductoBasica'>Las remeras básicas no pueden faltar en tu armario</div>
+                                <div class="botonesTalles">
+                                  <div class="btn-group">
                                   <select name='' id='botonTalles'>
                                     <option value='S'>S</option>
                                     <option value ='M'>M</option>
                                     <option value ='L'>L</option>
                                     <option value ='XL'>XL</option>
                                 </select>
+                                </div>
                                   </div>
                             </div>
                             <!-- Product actions-->
@@ -199,7 +210,7 @@
                                 <div class="text-center">
                                     <!-- MODAL -->
                                     <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalBlanca'>Añadir al carrito</button>
-                                    <div class="modal" id='ventanaModalBlanca' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                    <div class="modal fade" id='ventanaModalBlanca' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
                                         <div class="modal-dialog" role="document">
                                           <div class="modal-content">
                                             <div class="modal-header">
@@ -234,8 +245,12 @@
                                     <h5 id='nombreProducto'>Sweater white</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$2899</span>
-                                    <div id="precio">$2199</div>
+                                    <div id="precio">2199</div>
+                                    <div class='botonesVer'>
+                                      <button class='verMasSweater'>Ver más</button></div>
+                                      <div class='descripcionProductoSweater'>Elegante y combinable con todo tipo de outfits:  adquirí el tuyo en <strong>MM</strong></div>
                                 </div>
+                                <div class="botonesTalles">
                                 <div class="btn-group">
                                   <select name='' id='botonTalles'>
                                     <option value='S'>S</option>
@@ -243,6 +258,7 @@
                                     <option value ='L'>L</option>
                                     <option value ='XL'>XL</option>
                                 </select>
+                                </div>
                                   </div>
                             </div>
                             
@@ -252,7 +268,7 @@
                                 <div class="text-center">
                                      <!-- MODAL -->
                                      <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalSweater'>Añadir al carrito</button>
-                                     <div class="modal" id='ventanaModalSweater' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                     <div class="modal fade" id='ventanaModalSweater' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
                                          <div class="modal-dialog" role="document">
                                            <div class="modal-content">
                                              <div class="modal-header">
@@ -292,8 +308,12 @@
                                         <div class="bi-star-fill"></div> -->
                                     </div>
                                     <!-- Product price-->
-                                    <div id="precio">$3000</div>
+                                    <div id="precio">3000</div>
+                                    <div class='botonesVer'>
+                                      <button class='verMasJean'>Ver más</button></div>
+                                      <div class='descripcionProductoJean'>Un clásico que este verano llega para quedarse, obtené el mejor en <strong>MM</strong></div>
                                 </div>
+                                <div class="botonesTalles">
                                 <div class="btn-group">
                                   <select name='' id='botonTalles'>
                                     <option value='S'>S</option>
@@ -302,13 +322,14 @@
                                     <option value ='XL'>XL</option>
                                 </select>
                                   </div>
+                                  </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                      <!-- MODAL -->
                                      <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalJean'>Añadir al carrito</button>
-                                     <div class="modal" id='ventanaModalJean' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                     <div class="modal fade" id='ventanaModalJean' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
                                          <div class="modal-dialog" role="document">
                                            <div class="modal-content">
                                              <div class="modal-header">
@@ -344,7 +365,11 @@
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$13200</span>
                                     <div id="precio">$10200</div>
+                                    <div class='botonesVer'>
+                                      <button class='verMasCampera'>Ver más</button></div>
+                                      <div class='descripcionProductoCampera'>Sorprendé a todos el próximo invierno con la campera best seller del mercado</div>
                                 </div>
+                                <div class="botonesTalles">
                                 <div class="btn-group">
                                   <select name='' id='botonTalles'>
                                     <option value='S'>S</option>
@@ -353,13 +378,14 @@
                                     <option value ='XL'>XL</option>
                                 </select>
                                   </div>
+                                  </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                      <!-- MODAL -->
                                      <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalCampera'>Añadir al carrito</button>
-                                     <div class="modal" id='ventanaModalCampera' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                     <div class="modal fade" id='ventanaModalCampera' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
                                          <div class="modal-dialog" role="document">
                                            <div class="modal-content">
                                              <div class="modal-header">
@@ -391,22 +417,27 @@
                                     <!-- Product name-->
                                     <h5 id='nombreProducto'>Pantalón Black Summer</h5>
                                     <!-- Product price-->
-                                   <div id="precio">$3600</div>
+                                   <div id="precio">3600</div>
                                 </div>
-                                <div class="btn-group">
+                                <div class='botonesVer'>
+                                  <button class='verMasPantalon'>Ver más</button></div>
+                                  <div class='descripcionProductoPantalon'>Otro clásico infaltable en los armarios de todo el mundo, ¿que estás esperando para tener el tuyo?</div>
+                                  <div class="botonesTalles">
+                                  <div class="btn-group">
                                   <select name='' id='botonTalles'>
                                     <option value='S'>S</option>
                                     <option value ='M'>M</option>
                                     <option value ='L'>L</option>
                                     <option value ='XL'>XL</option>
                                 </select>
+                                </div>
                                   </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">  <!-- MODAL -->
                                     <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalPantalon'>Añadir al carrito</button>
-                                    <div class="modal" id='ventanaModalPantalon' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                    <div class="modal fade" id='ventanaModalPantalon' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
                                         <div class="modal-dialog" role="document">
                                           <div class="modal-content">
                                             <div class="modal-header">
@@ -509,6 +540,7 @@
                     </div>
                 </div>
             </div>
+            </div>
             <!-- Carrito dinámico -->
   <!--           <section class='carrito'> -->
 
@@ -558,6 +590,7 @@
    <script src='./js-coder/main.js'></script> -->
     <script src='./js-coder/DOM.js'></script>
    <script src='./js-coder/darkLight.js'></script>
+   <script src='./js-coder/animacionesJQ.js'></script>
    
    
     </body>
