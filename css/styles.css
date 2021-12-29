@@ -11504,3 +11504,29 @@ textarea.form-control-lg {
   transform: translateX(-1%);
 }
 
+.sectionStock{
+  background-color: grey;
+}
+
+.consulta{
+  text-align: center;
+}
+
+.añadirCarrito{
+  background-color: white;
+  color: black;
+  height: 40px;
+  border: 4px outset yellow;
+  border-radius: 50px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.añadirCarrito:hover{
+  background-color: yellow;
+  color: black;
+  height: 40px;
+  border: 4px outset #F6FFCB;
+  border-radius: 50px;
+  box-shadow: 10px 1px 10px rgba(0.5,0,0,0.4);
+  transform: translateY(-3%);
+}
