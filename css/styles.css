@@ -11530,3 +11530,17 @@ textarea.form-control-lg {
   box-shadow: 10px 1px 10px rgba(0.5,0,0,0.4);
   transform: translateY(-3%);
 }
+
+/* .card:hover{
+     transform: translateY(-1%);
+} */
+
+
+/* Lista dinámica del carrito */
+.listadoCarro{
+  border-bottom: 1px solid grey;
+}
+
+.borrarProducto{
+  color: red;
+}

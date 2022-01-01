@@ -9,6 +9,8 @@ function darkMode(){
     
     let navBar = document.getElementsByTagName('nav');
     navBar.style.background = 'black';
+
+    $('.añadirCarrito').css('background-color', 'grey');
   
   }
   

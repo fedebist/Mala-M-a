@@ -150,8 +150,6 @@ function agregarCarrito(e){
     let hijo = e.target;
     let padre = hijo.parentNode.parentNode.parentNode;
     let titulo = padre.querySelector('h5').textContent;
-    let precio = padre.querySelector('#precio').textContent;
-    let precioParse = parseInt(precio);
     let imagen = padre.querySelector('img').src;
     let talles = $('talles');
     console.log(talles);
@@ -159,18 +157,26 @@ function agregarCarrito(e){
     console.log(padre);
     console.log(titulo);
     console.log(imagen);
+
+/*     let total = 0;
+    let totalCarrito = $('#resumenCompra');
+    botonesCompra.forEach(items=>{
+    let precio = padre.querySelector('#precio');
+    let precioSolo = precioProducto.textContent.replace('$', '');
+    console.log(precio); */
     
 
-    $('#añadido').append(`${titulo} ${precio}  <img src='${imagen}'> \n`);
+    $('#añadido').append(`<div class='listadoCarro'>${titulo} ${precio}  <img src='${imagen}'> \n</div>`);
     $('#resumenCompra').append(`${precio}`);
 
-    $('#añadidoNav').append(`${titulo} ${precio} <img src='${imagen}'>\n`)
+    $('#añadidoNav').append(`${titulo} ${precio} <img src='${imagen}'>\n`);
     
-} 
+}
+;
 
 /* CONTADOR */
 
-let container = document.querySelector('.containerContador')
+let container = document.querySelector('.containerContador');
 let span = $('#contador');
 let contador = 0;
 
@@ -184,11 +190,25 @@ container.addEventListener('click', (e) =>{
 
 /* Precio */
 
+function actualizarTotal(){
+    let total = 0;
+    let totalCarrito = $('#resumenCompra');
+    let items = document.querySelectorAll('.añadirCarrito');
+    items.forEach(items=>{
+    let precioProducto = items.querySelectorAll('precio')
+    let precioSolo = precioProducto.textContent.replace('$', '')
+    })
+}
+
+
+
+/* ----------- */
+
 let precio = $('#precio')
 let precioParse = parseInt(precio);
 let total = $('#resumenCompra');
 
-precioParse.addEventListener('change', sumarPrecio);
+total.addEventListener('change', sumarPrecio);
 
 function sumarPrecio(){
     let totalPrecio = precioParse + precioParse;

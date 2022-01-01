@@ -118,11 +118,13 @@
            <button id='stock'>Consultar stock</button>
          </div>
         </section>
-    
+
+        <button id='botonGet'>GET</button>
+        
+<button id='botonPost'>POST</button>
 
     <!-- Section-->
         <section id="tienda">
-          <div class='basicaNeg'>
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5 col-sm-12 col-12">
@@ -135,7 +137,7 @@
                                     <!-- Product name-->
                                     <h5 id="nombreProducto" >Remera básica negra</h5>
                                     <!-- Product price-->
-                                    <div id="precio">2000</div>
+                                    <div id="precio">$2000</div>
                                 </div>
                                 <div class='botonesVer'>
                                 <button class='verMasBasica'>Ver más</button></div>
@@ -195,7 +197,7 @@
                                     </div>
                                     <!-- Product price-->
 
-                                    <div id="precio">2000</div>
+                                    <div id="precio">$2000</div>
                                 </div>
                                 <div class='botonesVer'>
                                   <button class='verMasBasica'>Ver más</button></div>
@@ -251,7 +253,7 @@
                                     <h5 id='nombreProducto'>Sweater white</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$2899</span>
-                                    <div id="precio">2199</div>
+                                    <div id="precio">$2199</div>
                                     <div class='botonesVer'>
                                       <button class='verMasSweater'>Ver más</button></div>
                                       <div class='descripcionProductoSweater'>Elegante y combinable con todo tipo de outfits:  adquirí el tuyo en <strong>MM</strong></div>
@@ -314,7 +316,7 @@
                                         <div class="bi-star-fill"></div> -->
                                     </div>
                                     <!-- Product price-->
-                                    <div id="precio">3000</div>
+                                    <div id="precio">$3000</div>
                                     <div class='botonesVer'>
                                       <button class='verMasJean'>Ver más</button></div>
                                       <div class='descripcionProductoJean'>Un clásico que este verano llega para quedarse, obtené el mejor en <strong>MM</strong></div>
@@ -423,7 +425,7 @@
                                     <!-- Product name-->
                                     <h5 id='nombreProducto'>Pantalón Black Summer</h5>
                                     <!-- Product price-->
-                                   <div id="precio">3600</div>
+                                   <div id="precio">$3600</div>
                                 </div>
                                 <div class='botonesVer'>
                                   <button class='verMasPantalon'>Ver más</button></div>
@@ -564,7 +566,7 @@
                     <div class="col-lg-9 col-sm-12 col-md-9">
                        <div id="tituloCarritoNav">Carrito de compras</div>
                        <div id='añadido'> 
-                        <img src='./Multimedia/baseline_delete_forever_black_24dp.png' onclick='borrar()'></div>
+                        <img src='./Multimedia/baseline_delete_forever_black_24dp.png' onclick='borrar()'><div class='borrarProducto'>Borrar producto</div></div>
                         <div id='preciosCarrito'></div>
                     </div>
                     <div class="col-lg-3 col-sm-12 col-md-3">
@@ -587,17 +589,16 @@
         <script src="js/scripts.js"></script>
 
         <!-- JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-   <script src='./js-coder/variablesGenerales.js'></script>
-   <!-- <script src='./js-coder/funcionesGenerales.js'></script>
-   <script src='./js-coder/main.js'></script> -->
+<script src='./js-coder/ajax.js'></script>
+<script src='./js-coder/variablesGenerales.js'></script>
+   <script src='./js-coder/funcionesGenerales.js'></script>
     <script src='./js-coder/DOM.js'></script>
    <script src='./js-coder/darkLight.js'></script>
    <script src='./js-coder/animacionesJQ.js'></script>
-   <script src='./js-coder/ajax.js'></script>
    
    
     </body>

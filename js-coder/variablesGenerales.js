@@ -18,7 +18,7 @@ let productos = [
     
     console.log(productos);
 
-let añadirProductos = document.getElementsByClassName('añadirCarrito');
+/* let añadirProductos = document.getElementsByClassName('añadirCarrito');
 añadirProductos.addEventListener('click', e=>{
      e.preventDefault();
      let listado = document.getElementsByClassName('compras');
@@ -29,7 +29,7 @@ for (let producto of productos){
      <p>$ ${producto.precio}</p>
      </div>`
 }
-})
+}) */
 
 /* let listado = document.getElementsByClassName('compras');
 
@@ -41,13 +41,13 @@ for (let producto of productos){
 } */
 
 
-function productosCarrito (id, name, precio, stock){
+/* function productosCarrito (id, name, precio, stock){
      this.id = id;
      this.name= name,
      this.precio= precio,
      this.stock= stock
 }
-
+ */
 const producto1 = new productosCarrito('1', 'Remera básica negra', 2000, 20)
 const producto2 = new productosCarrito('2', 'Remera básica blanca', 2000, 15)
 const producto3 = new productosCarrito('3', 'Sweater', 2200, 20)
