@@ -166,7 +166,7 @@ function agregarCarrito(e){
     console.log(precio); */
     
 
-    $('#añadido').append(`<div class='listadoCarro'>${titulo} ${precio}  <img src='${imagen}'> \n</div>`);
+    $('#añadido').append(`<div class='listadoCarro'>${titulo} ${precio}  <img src='${imagen}'> <button class='eliminarDinamico' onclick='borrar()'>Eliminar Producto</button> \n</div>`);
     $('#resumenCompra').append(`${precio}`);
 
     $('#añadidoNav').append(`${titulo} ${precio} <img src='${imagen}'>\n`);
