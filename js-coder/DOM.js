@@ -16,15 +16,6 @@ function borrar(){
     total.removeChild(total.lastChild);
 }
 
-function precios(){
-    let precio = document.getElementsByClassName('precio');
-    let precioCarrito = document.getElementsByClassName('preciosCarrito');
-
-    let precioPantalla = document.createElement ('p');
-    precioPantalla.innerHTML = `<p>Precio: ${precio.innerText}</p>`
-    precioCarrito.appendChild(precioPantalla);
-}
-
 /* let botonCompra = document.querySelector('.añadirCarrito')
 
 botonCompra.addEventListener('click', (e)=>{
@@ -153,10 +144,20 @@ function agregarCarrito(e){
     let imagen = padre.querySelector('img').src;
     let talles = $('talles');
     console.log(talles);
-    console.log(precioParse);
     console.log(padre);
     console.log(titulo);
     console.log(imagen);
+
+    /* Actualizar precio */
+    let total = 0;
+    let totalCarrito = $('#resumenCompra');
+    botonesCompra.forEach(botonesCompra=>{
+    let precio = padre.querySelector('#precio');
+    /* Reemplaza signo $ por un string vacío. Number para pasar a int */
+    let precioSolo = Number(precio.textContent.replace('$', ''));
+    total = total + precioSolo;
+    $('#resumenCompra').append(`${precioSolo}`);
+    })
 
 /*     let total = 0;
     let totalCarrito = $('#resumenCompra');
@@ -167,7 +168,6 @@ function agregarCarrito(e){
     
 
     $('#añadido').append(`<div class='listadoCarro'>${titulo} ${precio}  <img src='${imagen}'> <button class='eliminarDinamico' onclick='borrar()'>Eliminar Producto</button> \n</div>`);
-    $('#resumenCompra').append(`${precio}`);
 
     $('#añadidoNav').append(`${titulo} ${precio} <img src='${imagen}'>\n`);
     
@@ -190,21 +190,10 @@ container.addEventListener('click', (e) =>{
 
 /* Precio */
 
-function actualizarTotal(){
-    let total = 0;
-    let totalCarrito = $('#resumenCompra');
-    let items = document.querySelectorAll('.añadirCarrito');
-    items.forEach(items=>{
-    let precioProducto = items.querySelectorAll('precio')
-    let precioSolo = precioProducto.textContent.replace('$', '')
-    })
-}
-
-
 
 /* ----------- */
 
-let precio = $('#precio')
+/* let precio = $('#precio')
 let precioParse = parseInt(precio);
 let total = $('#resumenCompra');
 
@@ -214,7 +203,7 @@ function sumarPrecio(){
     let totalPrecio = precioParse + precioParse;
     $('#resumenCompra').append(`${totalPrecio}`);
     console.log(totalPrecio);
-}
+} */
 
 
 /* Talles */

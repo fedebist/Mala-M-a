@@ -4519,6 +4519,8 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  box-shadow: 10px 1px 10px rgba(0.5,0,0,0.3);
+
 }
 .card > hr {
   margin-right: 0;
@@ -11544,3 +11546,42 @@ textarea.form-control-lg {
 .borrarProducto{
   color: red;
 }
+
+/* Alineado izquierdo carrito título e imagen */
+.imgTitulo{
+  text-align: left;
+}
+
+.inputCantidad{
+  height: 35px;
+  width: 38px;
+  text-align: right;
+}
+
+/* alineado centrado precio carrito */
+.precioTablaCarrito{
+  text-align: center;
+}
+
+/* total compra carrito */
+.totalCompra{
+  text-align: center;
+  font-size: 110%;
+  color: darkgrey;
+}
+
+#tituloTotal{
+  text-align: center;
+  font-size: 110%;
+  color: darkgrey;
+}
+
+/* botón de borrado carrito */
+.btnBorrarCarrito{
+  color: white;
+  background-color: #FF2D2D;
+  border-radius: 30px;
+  box-shadow: 10px 1px 10px rgba(0.5,0,0,0.2);
+}
+
+

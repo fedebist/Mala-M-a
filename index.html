@@ -363,11 +363,11 @@
                         <div class="card h-100">
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
-                            <img class="card-img-top" src="./Multimedia/campera hoodie.jpg" alt="..." />
+                          
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
+                                  <img class="card-img-top" src="./Multimedia/campera hoodie.jpg" alt="..." />
                                     <!-- Product name-->
                                     <h5 id='nombreProducto'>Hoodie Campera</h5>
                                     <!-- Product price-->
@@ -563,16 +563,28 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 col-sm-12 col-md-9">
+                    <div class="col-lg-12 col-sm-12 col-md-12">
                        <div id="tituloCarritoNav">Carrito de compras</div>
-                       <div id='añadido'> 
+                       <div id='añadido'><table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                          </tr>
+                        </thead>
+                        </table>
                         <!-- <img src='./Multimedia/baseline_delete_forever_black_24dp.png' onclick='borrar()'><div class='borrarProducto'>Borrar producto</div> --></div>
-                        <div id='preciosCarrito'></div>
+                     <!--    <div id='preciosCarrito'></div>
                     </div>
                     <div class="col-lg-3 col-sm-12 col-md-3">
-                       <div id="resumenCompra">Total</div>
+                       <div id="resumenCompra">Total</div> -->
                        </div>
                 </div>
+              </div>
+
+              <div id='tituloTotal'>Total
+                <div class='totalCompra'>$0</div>
               </div>
 
 
@@ -596,9 +608,10 @@
 <script src='./js-coder/ajax.js'></script>
 <script src='./js-coder/variablesGenerales.js'></script>
    <script src='./js-coder/funcionesGenerales.js'></script>
-    <script src='./js-coder/DOM.js'></script>
+<!--     <script src='./js-coder/DOM.js'></script> -->
    <script src='./js-coder/darkLight.js'></script>
    <script src='./js-coder/animacionesJQ.js'></script>
+   <script src='./js-coder/tienda.js'></script>
    
    
     </body>
