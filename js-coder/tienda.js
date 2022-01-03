@@ -19,7 +19,7 @@ function agregarClick(e){
 }
 
 function añadirAlCarrito(titulo,imagen,precio){
- $('#añadido').append(` <div class="container">
+ $('#añadido').append(` <div class="container carritoItems">
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-md-12">
  <table class="table table-hover">
@@ -30,7 +30,7 @@ function añadirAlCarrito(titulo,imagen,precio){
      <td></td>
      <td></td>
      <td></td>
-     <td><input type='text' class='inputCantidad'></td>
+     <td><input type='number' value="1" class='inputCantidad'></td>
      <td><button class='btnBorrarCarrito'>X</button>
    </tr>
  </tbody>
@@ -39,13 +39,42 @@ function añadirAlCarrito(titulo,imagen,precio){
 </div>
  `)
 
+ /* Identificar botones de borrado */
+ let carroItems = document.querySelectorAll('.carritoItems');
+ carroItems.forEach(itemCarro=>{
+  let botonBorrar = itemCarro.querySelector('.btnBorrarCarrito').addEventListener('click', borrarItem);
+  });
+
   actualizarTotal();
 }
 
 function actualizarTotal(){
     let total = 0;
     let totalHTML = document.querySelector('.totalCompra');
-    let precioTabla = $('.imgTitulo');
-    console.log(precioTabla);
+    /* seleccionar items del carrito dinámico */
+    let carroItems = document.querySelectorAll('.carritoItems');
+    carroItems.forEach(itemCarro=>{
+     let precioItemCarrito = itemCarro.querySelector('.precioTablaCarrito');
+     /* generar sólo el valor contenido en el div. Reemplazar signo $ por string vacío */
+     let precioItemCarritoContent = Number(precioItemCarrito.textContent.replace
+        ('$', ''));
+        /* Cantidad de productos */
+        let cantidadCarrito = itemCarro.querySelector('.inputCantidad');
+        let cantidadCarritoContent = Number(cantidadCarrito.value);
+        /* suma y multiplicación, total * cantidad */
+        total= total + precioItemCarritoContent * cantidadCarritoContent;
+        console.log(total);
+        /* agregar total en HTML */
+        totalHTML.innerHTML = `$${total.toFixed(2)}`
+        
+
+    })
     
+ }
+
+ /* Borrar item correspondiente al botón de eliminar */
+ function borrarItem(e){
+  let botonClickeado= e.target;
+  botonClickeado.closest('.carritoItems').remove();
+  actualizarTotal();
  }

@@ -4517,8 +4517,8 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border: 7px solid rgba(112, 100, 100, 0.466);
+  border-radius: 0.75rem;
   box-shadow: 10px 1px 10px rgba(0.5,0,0,0.3);
 
 }
