@@ -43,7 +43,10 @@ function añadirAlCarrito(titulo,imagen,precio){
  let carroItems = document.querySelectorAll('.carritoItems');
  carroItems.forEach(itemCarro=>{
   let botonBorrar = itemCarro.querySelector('.btnBorrarCarrito').addEventListener('click', borrarItem);
-  });
+  /* Cambiar de cantidad y actualizar precio */
+  let botonCantidad = itemCarro.querySelector('.inputCantidad')
+ .addEventListener('change', cantidadChange);
+});
 
   actualizarTotal();
 }
@@ -76,5 +79,15 @@ function actualizarTotal(){
  function borrarItem(e){
   let botonClickeado= e.target;
   botonClickeado.closest('.carritoItems').remove();
+  /* actualizar el total al borrar */
   actualizarTotal();
+ }
+
+ function cantidadChange(e){
+    let cambio = e.target;
+    /* si input es menor o igual a 0, pasar a 1 */
+    if(cambio.value <=0){
+      cambio.value = 1;
+    }
+    actualizarTotal();
  }
