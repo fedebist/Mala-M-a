@@ -1,6 +1,7 @@
 /* Variables globales */
 let botonesCompra = document.querySelectorAll('.añadirCarrito');
-let carrito = $('#añadido');
+let carrito = document.querySelector('#añadido');
+let carroLibre = []
 
 /* --------------------------- */
 
@@ -14,12 +15,48 @@ function agregarClick(e){
    let titulo = item.querySelector('h5').textContent;
    let imagen = item.querySelector('img').src;
    let precio = item.querySelector('#precio').textContent;
+   let talle = item.querySelector('#botonTalles').value;
+   console.log(talle);
+/* genera item */
+   let newItem = {
+     title : titulo,
+     price: precio,
+     img: imagen,
+     cantidad: 1
+   }
+   
+   addItemCarrito(newItem)
 
    añadirAlCarrito(titulo, imagen, precio);
 }
 
-function añadirAlCarrito(titulo,imagen,precio){
- $('#añadido').append(` <div class="container carritoItems">
+/* agrega a variable global carroLibre el new item: producto clickeado */
+function addItemCarrito(newItem){
+ carroLibre.push(newItem)
+
+ renderCarrito()
+}
+
+function renderCarrito(){
+  console.log(carroLibre);
+}
+
+function añadirAlCarrito(titulo,imagen,precio, talle){
+
+ let productosEnCarrito = carrito.getElementsByClassName('imgTitulo');
+ console.log(productosEnCarrito);
+ for (let i = 0; i < productosEnCarrito.length; i++) {
+  if (productosEnCarrito[i].innerText === titulo) {
+    let elementQuantity = productosEnCarrito[i].
+      parentElement.parentElement.parentElement.querySelector(
+        '.inputadCantidad'
+      );
+      elementQuantity.value++;
+  }
+}
+
+let carritoFila = document.createElement('div');
+let contenidoCarrito = ` <div class="container carritoItems">
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-md-12">
  <table class="table table-hover">
@@ -27,6 +64,7 @@ function añadirAlCarrito(titulo,imagen,precio){
     <tr>
      <td> <div class='imgTitulo'><img src='${imagen}'> ${titulo}</div></td>
      <td><div class='precioTablaCarrito'>${precio}</div></td>
+     <td><div class='tallesDom'>${talle}</div></td>
      <td></td>
      <td></td>
      <td></td>
@@ -37,7 +75,16 @@ function añadirAlCarrito(titulo,imagen,precio){
 </table>
 </div>
 </div>
- `)
+ `;
+
+for(let i=0; i < contenidoCarrito.length; i++){
+ if(contenidoCarrito[i].innerText=== titulo){
+  console.log(contenidoCarrito[i].innerText)
+ }
+}
+
+ carritoFila.innerHTML = contenidoCarrito;
+ carrito.append(carritoFila);
 
  /* Identificar botones de borrado */
  let carroItems = document.querySelectorAll('.carritoItems');
@@ -69,8 +116,9 @@ function actualizarTotal(){
         console.log(total);
         /* agregar total en HTML */
         totalHTML.innerHTML = `$${total.toFixed(2)}`
-        
 
+        addLocalStorage()
+        
     })
     
  }
@@ -89,5 +137,19 @@ function actualizarTotal(){
     if(cambio.value <=0){
       cambio.value = 1;
     }
+    /* Actualiza el total si varía la cantidad */
     actualizarTotal();
  }
+
+ function addLocalStorage(){
+  localStorage.setItem('carroLibre', JSON.stringify(carroLibre));
+}
+
+window.onload = function(){
+  /* Si existe carroLibre lo parsea y lo guarda en storage */
+  let storage = JSON.parse(localStorage.getItem('carroLibre'))
+  if(storage){
+    carroLibre = storage;
+    renderCarrito();
+  }
+}

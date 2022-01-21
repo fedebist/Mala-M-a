@@ -17,9 +17,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet"/>
     </head>
-    <body></body>
+    <body>
         <!-- Navigation-->
         <nav class='navNavBar'>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -144,7 +144,7 @@
                                 <div class='descripcionProductoBasica'>Las remeras básicas no pueden faltar en tu armario</div>
                                 <div class="botonesTalles">
                                 <div class="btn-group">
-                                  <select name='' id='botonTalles'>
+                                  <select name='' id='botonTalles' required>
                                     <option value='S'>S</option>
                                     <option value ='M'>M</option>
                                     <option value ='L'>L</option>
@@ -158,7 +158,7 @@
                                 <div class="text-center">
                                     <!-- MODAL -->
                                     <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModal'>Añadir al carrito</button>
-                                    <div class="modal fade" id='ventanaModal' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                    <div class="modal right" id='ventanaModal' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
                                         <div class="modal-dialog" role="document">
                                           <div class="modal-content">
                                             <div class="modal-header">
@@ -467,6 +467,59 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col mb-5 col-sm-12 col-12">
+                      <div class="card h-100">
+                          <!-- Product image-->
+                          <img class="card-img-top" src="./Multimedia/pantalon nlack.jpg" alt="..." />
+                          <!-- Product details-->
+                          <div class="card-body p-4">
+                              <div class="text-center">
+                                  <!-- Product name-->
+                                  <h5 id='nombreProducto'>RI</h5>
+                                  <!-- Product price-->
+                                 <div id="precio">$3600</div>
+                              </div>
+                              <div class='botonesVer'>
+                                <button class='verMasPantalon'>Ver más</button></div>
+                                <div class='descripcionProductoPantalon'>Otro clásico infaltable en los armarios de todo el mundo, ¿qué estás esperando para tener el tuyo?</div>
+                                <div class="botonesTalles">
+                                <div class="btn-group">
+                                <select name='' id='botonTalles'>
+                                  <option value='S'>S</option>
+                                  <option value ='M'>M</option>
+                                  <option value ='L'>L</option>
+                                  <option value ='XL'>XL</option>
+                              </select>
+                              </div>
+                                </div>
+                          </div>
+                          <!-- Product actions-->
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                              <div class="text-center">  <!-- MODAL -->
+                                  <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalPantalon'>Añadir al carrito</button>
+                                  <div class="modal fade" id='ventanaModalPantalon' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title">RI</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                            <p>El producto se agregó al carrito</p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <a href="./index.html"><button type="button" class="close" data-dismiss='modal' aria-label='Close'>Volver a la tienda</button></a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                      </div>
+                  </div>
                     <div class="col mb-5 col-sm-12 col-12">
                         <div class="card h-100">
                             <!-- Sale badge-->
@@ -569,7 +622,7 @@
                         <thead>
                           <tr>
                             <th scope="col">Producto</th>
-                            <th scope="col">Precio</th>
+                            <th scope="col">Precio unitario</th>
                             <th scope="col">Cantidad</th>
                           </tr>
                         </thead>
