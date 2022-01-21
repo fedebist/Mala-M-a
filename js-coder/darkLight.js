@@ -11,6 +11,8 @@ function darkMode(){
     navBar.style.background = 'black';
 
     $('.añadirCarrito').css('background-color', 'grey');
+
+    $('#productos').css('background-color', 'black');
   
   }
   
