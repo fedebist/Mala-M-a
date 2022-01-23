@@ -11515,22 +11515,26 @@ textarea.form-control-lg {
 }
 
 .añadirCarrito{
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: beige;
   height: 40px;
-  border: 4px outset yellow;
-  border-radius: 50px;
+  border: 4px outset grey;
+  border-radius: 10px;
   box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
 .añadirCarrito:hover{
-  background-color: yellow;
+  background-color: grey;
   color: black;
   height: 40px;
   border: 4px outset #F6FFCB;
   border-radius: 50px;
   box-shadow: 10px 1px 10px rgba(0.5,0,0,0.4);
   transform: translateY(-3%);
+}
+
+.añadirCarrito:active{
+  background-color: red;
 }
 
 /* .card:hover{
@@ -11663,3 +11667,19 @@ textarea.form-control-lg {
   text-align: center;
   font-size: 200%;
 }
+
+.carrito{
+  min-height: 70px;
+  max-width: 1000px;
+}
+
+/* .productoTabla{
+  display: flex;
+}
+ */
+.productoTabla > img{
+  width: 90px;
+  margin-right: 20px;
+}
+
+

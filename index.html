@@ -43,6 +43,11 @@
                         </li>
                       </ul>
                         </button>
+                        <ul class="nav nav-pills">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="./paginas/carrito.html">Ir al carrito</a>
+                          </li>
+                        </ul>
                         <div class="containerContador">
                         <div class="dropdown">
                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -471,12 +476,12 @@
                     <div class="col mb-5 col-sm-12 col-12">
                       <div class="card h-100">
                           <!-- Product image-->
-                          <img class="card-img-top" src="./Multimedia/pantalon nlack.jpg" alt="..." />
+                          <img class="card-img-top" src="./Multimedia/Chomba negra.jpg" alt="..." />
                           <!-- Product details-->
                           <div class="card-body p-4">
                               <div class="text-center">
                                   <!-- Product name-->
-                                  <h5 id='nombreProducto'>RI</h5>
+                                  <h5 id='nombreProducto'>Chomba negra</h5>
                                   <!-- Product price-->
                                  <div id="precio">$3600</div>
                               </div>
@@ -496,13 +501,14 @@
                           </div>
                           <!-- Product actions-->
                           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                              <div class="text-center">  <!-- MODAL -->
-                                  <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalPantalon'>Añadir al carrito</button>
-                                  <div class="modal fade" id='ventanaModalPantalon' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                              <div class="text-center">
+                                  <!-- MODAL -->
+                                  <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModalChomba'>Añadir al carrito</button>
+                                  <div class="modal fade" id='ventanaModalChomba' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
                                       <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                           <div class="modal-header">
-                                            <h5 class="modal-title">RI</h5>
+                                            <h5 class="modal-title">Chomba negra</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                               <span aria-hidden="true">&times;</span>
                                             </button>
@@ -613,12 +619,48 @@
          
   <section id='carritoCompras'>
 
-
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-12 col-sm-12 col-md-12">
+             <div id="tituloCarritoNav">Carrito de compras</div>
             <div class="container">
+         <div class="row">
+           <table class="table">
+            <thead>
+              <tr class='text-primary'>
+                <th scope="col">Producto</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Talle</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody class='tbody'>
+              <!-- crear tr desde js -->
+              <tr>
+            
+            </tr>
+            </tbody>
+          </table>
+         <div class="row mx-4">
+             <div class="col">
+              <h3 id='tituloTotal'>Total</h3>
+               <div class='totalCompra'>$0</div>
+              <div class='col d-flex justify-content-end'>
+                <button class='btn btn-success'>Comprar</button>
+              </div>
+             </div>
+         </div>
+
+        </div>
+        </div>
+
+        <!--     <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-md-12">
                        <div id="tituloCarritoNav">Carrito de compras</div>
-                       <div id='añadido'><table class="table table-hover">
+                       <div id='añadido'><table class="table table-hover tablaCarrito">
                         <thead>
                           <tr>
                             <th scope="col">Producto</th>
@@ -626,7 +668,7 @@
                             <th scope="col">Cantidad</th>
                           </tr>
                         </thead>
-                        </table>
+                        </table> -->
                         <!-- <img src='./Multimedia/baseline_delete_forever_black_24dp.png' onclick='borrar()'><div class='borrarProducto'>Borrar producto</div> --></div>
                      <!--    <div id='preciosCarrito'></div>
                     </div>
@@ -636,8 +678,8 @@
                 </div>
               </div>
 
-              <div id='tituloTotal'>Total
-                <div class='totalCompra'>$0</div>
+          <!--     <div id='tituloTotal'>Total -->
+             <!--    <div class='totalCompra'>$0</div> -->
               </div>
 
 
@@ -664,7 +706,8 @@
 <!--     <script src='./js-coder/DOM.js'></script> -->
    <script src='./js-coder/darkLight.js'></script>
    <script src='./js-coder/animacionesJQ.js'></script>
-   <script src='./js-coder/tienda.js'></script>
+    <!-- <script src='./js-coder/tienda.js'></script> --> 
+   <script src='./js-coder/tiendaNueva.js'></script>
    
    
     </body>
