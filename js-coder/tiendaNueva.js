@@ -38,6 +38,7 @@ let inputCantidad = tbody.getElementsByClassName('inputCantidad');
         carrito[i].cantidad ++;
         let inputValue = inputCantidad[i]
         inputValue.value++;
+        alert(`El producto ya estaba en el carrito, la cantidad ahora es ${carrito[i].cantidad} `)
         /* actualizar precio si hay cambios en cantidad */
         actualizarTotal();
 
@@ -64,8 +65,10 @@ function renderizarCarrito(){
     <td class='precioTabla'>${item.precio}</td>
     <td class='cantidadTabla'><input class='inputCantidad' type='number' min='1' value=${item.cantidad}></td>
     <td><button class='btnBorrarCarrito'>X</button></td>
-
+    
+    
     `
+    console.log(carrito)
     /* dentro de tr, agregar contenido */
     tr.innerHTML = contenido;
     /* agregar al tbody el contenido */
@@ -95,7 +98,7 @@ function actualizarTotal(){
     })
 
    totalHTML.innerHTML = `$${total.toFixed(2)}`;
-   /* agregarLocalStorage(); */
+   addLocalStorage();
 }
 
 
@@ -125,6 +128,10 @@ function cantidadChange(e){
             cambio.value <= 0 ?
             (cambio.value = 1)
            : cambio.value
+           /* si input es mayor a 5, volver a 5 */
+           cambio.value > 5 ?
+           (cambio.value = 5)
+          : cambio.value
            item.cantidad = cambio.value;
            /* actualizar total si varía la cantidad */
            actualizarTotal();
@@ -133,15 +140,15 @@ function cantidadChange(e){
 
  }
 
-/* function agregarLocalStorage(){
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+ function addLocalStorage(){
+  localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
 window.onload = function(){
-     si existe carrito lo guarda en storage 
-    let storage = JSON.parse(localStorage.getItem('carrito'));
-    if(storage){
-      carrito = storage;
-      renderizarCarrito()
-    }
-} */
+  /* Si existe carroLibre lo parsea y lo guarda en storage */
+  let storage = JSON.parse(localStorage.getItem('carrito'));
+  if(storage){
+    carrito = storage;
+    renderizarCarrito();
+  }
+}
