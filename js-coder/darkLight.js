@@ -18,6 +18,14 @@ function darkMode(){
     $('.tituloFiltrar').css('color', 'white');
 
     $('.tituloProductos').css('color', 'white');
+    
+    /* fondo carrito */
+    $('.carritoHTML').css('background-color', 'grey');
+
+    /* titulo TOTAL carrito */
+    $('#tituloTotal').css('color', 'white');
+
+    $('.totalCompra').css('color', 'white');
   }
   
   function lightMode(){
@@ -38,5 +46,13 @@ function darkMode(){
     $('#productos').css('background-color', 'white');
 
     $('.tituloProductos').css('color', 'black');
+
+    /* fondo carrito */
+    $('.carritoHTML').css('background-color', 'beige');
+
+     /* titulo TOTAL carrito */
+     $('#tituloTotal').css('color', 'grey');
+
+     $('.totalCompra').css('color', 'grey');
   }
 
