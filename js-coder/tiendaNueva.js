@@ -64,11 +64,11 @@ function renderizarCarrito(){
         <div class='col-lg-2 col-sm-3 col-3'>
             <img src='${item.img}' width= '100px'>
         </div>
-        <div class="col-lg-4 col-sm-5 col-4">
+        <div class="col-lg-4 col-sm-5 col-5">
         <b><h6 class='tituloTabla'>${item.titulo}</b></h6>
           <p class='mt-5 eliminarCarrito'>Eliminar producto <button class='btnBorrarCarrito'>X</button></p>
         </div>
-        <div class='col-lg-3 col-sm-2 col-3'>
+        <div class='col-lg-3 col-sm-2 col-2'>
          <p class='talleTabla'><b>Talle: </b>${item.talle}</p>
             <p class='cantidadTabla'><b>Cantidad</b>   <input class='inputCantidad' type='number' min='1' max='5' value=${item.cantidad}></p>
         </div>
