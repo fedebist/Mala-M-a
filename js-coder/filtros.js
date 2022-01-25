@@ -1,22 +1,36 @@
-  let categorias = document.querySelectorAll('.btnFiltros');
-console.log(categorias);
+/* Agregar clase activo al primer filtro*/
+$('.filtrosProductos .categorias[category="all"]').addClass('itemActivo');
 
-categorias.forEach(cat=>{
-    cat.addEventListener('click', mostrarCategoria)
-})
+$('.categorias').click(function(){
+  /* valor de atributo category */
+  let categorias = $(this).attr('category');
+  console.log(categorias);
 
-function mostrarCategoria(e){
-let boton = e.target;
-/* category de cada botón */
-let categoria = $(this).attr('category');
-console.log(categoria);
+  /* Remover la clase activo del anteúltimo clickeado */
+  $('.categorias').removeClass('itemActivo');
+  /* Agregar clase activo al clickeado */
+  $(this).addClass('itemActivo');
 
-/* OCULTANDO PRODUCTOS */
-$('.card').hide();
+   /* OCULTAR PRODUCTOS */
+   $('.card').css('transform', 'scale(0)');
+  function ocultarProducto(){
+    $('.card').hide();
+  } setTimeout(ocultarProducto, 400);
 
-/* MOSTRANDO PRODUCTOS */
 
-$('.card[category=“remeras”]').show()
+  /* MOSTRAR PRODUCTOS */
+     /* category= variable local categorias, trae atributo category */
+     function mostrarProducto(){
+      $('.card[category="'+categorias+'"]').show(); 
+      $('.card[category="'+categorias+'"]').css('transform', 'scale(1)');
+    } setTimeout(mostrarProducto, 400);
+  
+});
 
-}   
-
+/* Función filtro 'TODO' */
+$('.categorias[category="all"]').click(function(){
+  function mostrarTodo(){
+    $('.card').show();
+    $('.card').css('transform', 'scale(1)');
+  }setTimeout(mostrarTodo, 400);
+});

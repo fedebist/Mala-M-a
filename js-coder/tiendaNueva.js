@@ -42,8 +42,11 @@ let inputCantidad = tbody.getElementsByClassName('inputCantidad');
         /* actualizar precio si hay cambios en cantidad */
         actualizarTotal();
 
-      
        return null;
+     }
+     if(inputCantidad[i]>=5){
+        let inputValue = inputCantidad[i]
+        inputValue.value = inputValue.value
      }
  }
 
@@ -54,6 +57,7 @@ let inputCantidad = tbody.getElementsByClassName('inputCantidad');
 
 function renderizarCarrito(){
    tbody.innerHTML = '';
+   /* for each a lo que hay adentro del carrito (item) */
    carrito.forEach(item =>{
     let tr = document.createElement('p');
     /* agregar clase al tr */
@@ -78,9 +82,12 @@ function renderizarCarrito(){
         </div>
     </div>
 </div>
-    
-    
-    `
+       `
+/*         usar el mismo nav para que no se concatenen 
+      $('#carritoBarraNav').append(`<div>${item.titulo}</div>
+      <img src='${item.img}' width= '100px'>
+      `); 
+ */
     console.log(carrito);
     /* dentro de tr, agregar contenido */
     tr.innerHTML = contenido;
