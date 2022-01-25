@@ -11313,8 +11313,9 @@ textarea.form-control-lg {
 
 #tituloCarritoNav{
   font-size: 180%;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   text-align: center;
+  padding-bottom: 5px;
 }
 
 .resumenCompra{
@@ -11679,4 +11680,50 @@ textarea.form-control-lg {
   margin-right: 20px;
 }
 
+.categorias{
+  text-align: center;
+}
+
+.tituloFiltrar{
+  text-align: center;
+  font-size: 130%;
+;
+}
+
+/*  */
+
+.btnFiltros{
+  background-color: black;
+  color: beige;
+  height: 40px;
+  border: 4px outset grey;
+  border-radius: 50px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.btnFiltros:hover{
+  height: 40px;
+  border: 4px outset #F6FFCB;
+  border-radius: 50px;
+  box-shadow: 10px 1px 10px rgba(0.5,0,0,0.4);
+  transform: translateX(-3%);
+}
+
+.filter{
+  display: none;
+}
+
+/* items dinámicos del carrito */
+.itemCarrito{
+  border-bottom: 1px solid;
+  padding-top: 10px;
+}
+
+.tituloTabla{
+  font-size: 115%;
+}
+
+.eliminarCarrito{
+  font-size: 70%;
+}
 

@@ -55,20 +55,33 @@ let inputCantidad = tbody.getElementsByClassName('inputCantidad');
 function renderizarCarrito(){
    tbody.innerHTML = '';
    carrito.forEach(item =>{
-    let tr = document.createElement('tr');
+    let tr = document.createElement('p');
     /* agregar clase al tr */
     tr.classList.add('itemCarrito');
     let contenido = `
-    <th scope="row"><b><h6 class='tituloTabla'>${item.titulo}</b></h6></th>
-    <td class='productoTabla'><img src='${item.img}'> 
-    <td class='talleTabla'>${item.talle}</td>
-    <td class='precioTabla'>${item.precio}</td>
-    <td class='cantidadTabla'><input class='inputCantidad' type='number' min='1' value=${item.cantidad}></td>
-    <td><button class='btnBorrarCarrito'>X</button></td>
+    <div class="container">
+    <div class="row">
+        <div class='col-lg-2 col-sm-12'>
+            <img src='${item.img}' width= '100px'>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+        <b><h6 class='tituloTabla'>${item.titulo}</b></h6>
+          <p class='mt-5 eliminarCarrito'>Eliminar producto <button class='btnBorrarCarrito'>X</button></p>
+        </div>
+        <div class='col-lg-3 col-sm-12'>
+         <p class='talleTabla'><b>Talle: </b>${item.talle}</p>
+            <p class='cantidadTabla'><b>Cantidad</b>   <input class='inputCantidad' type='number' min='1' max='5' value=${item.cantidad}></p>
+        </div>
+        <div class='col-lg-3 col-sm-12'>
+           <p><b>Precio unitario:</b> ${item.precio}</p>
+
+        </div>
+    </div>
+</div>
     
     
     `
-    console.log(carrito)
+    console.log(carrito);
     /* dentro de tr, agregar contenido */
     tr.innerHTML = contenido;
     /* agregar al tbody el contenido */
@@ -144,8 +157,9 @@ function cantidadChange(e){
   localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
+/* busca el getItem en local storage si existe carrito */
 window.onload = function(){
-  /* Si existe carroLibre lo parsea y lo guarda en storage */
+  /* Si existe carrito lo parsea y lo guarda en storage */
   let storage = JSON.parse(localStorage.getItem('carrito'));
   if(storage){
     carrito = storage;

@@ -118,21 +118,46 @@
           </div>
         </div>
 
+        <!-- section Filtros -->
+
+       
 
 
-    <!-- Section-->
+    <!-- Tienda-->
+         <!-- FILTROS -->
+    <section class="sectionCategorias">
+      <p class='tituloFiltrar'><img src='./Multimedia/filtrar.png' width='50px'>Filtrar por</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+
+              <a href='#' class='text-decoration-none' class='categorias' category='all'><button class='btnFiltros' category='all'>Todo</button></a>
+              <a href='#' class='text-decoration-none' class='categorias' category='chombas'><button class='btnFiltros' category='chombas'>Chombas & camisas</button></a>
+              <a href='#' class='text-decoration-none' class='categorias' category='remeras'><button class='btnFiltros' category='remeras'> Remeras</button></a>
+              <a href='#' class='text-decoration-none' class='categorias' category='buzos'><button class='btnFiltros' category='buzos'>Buzos & conjuntos</button></a>
+              <a href='#' class='text-decoration-none' class='categorias' category='jeans'><button class='btnFiltros' category='jeans'>Jeans & joggers</button></a>
+              <a href='#' class='text-decoration-none' class='categorias' category='camperas'><button class='btnFiltros' category='camperas'>Camperas</button></a>
+
+    
+    </div>
+      </div>
+    </div>
+    </section>
+     
+        
+
         <section id="tienda">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5 col-sm-12 col-12">
-                        <div class="card h-100">
+                        <div class="card h-100" category='remeras'>
                             <!-- Product image-->
                             <img class="card-img-top" src="./Multimedia/básica negra.png" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 id="nombreProducto" >Remera básica negra</h5>
+                                    <h5 id="nombreProducto">Remera básica negra</h5>
                                     <!-- Product price-->
                                     <div id="precio">$2000</div>
                                 </div>
@@ -155,7 +180,7 @@
                                 <div class="text-center">
                                     <!-- MODAL -->
                                     <button class="btn btn-success añadirCarrito" href="./index.html#carrito" data-toggle='modal' data-target='#ventanaModal'>Añadir al carrito</button>
-                                    <div class="modal right" id='ventanaModal' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                    <div class="modal fade" id='ventanaModal' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
                                         <div class="modal-dialog" role="document">
                                           <div class="modal-content">
                                             <div class="modal-header">
@@ -188,7 +213,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 id='nombreProducto'>Remera básica blanca</h5>
+                                    <h5 id='nombreProducto' category='remeras'>Remera básica blanca</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                     </div>
@@ -247,7 +272,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 id='nombreProducto'>Sweater white</h5>
+                                    <h5 id='nombreProducto' category='buzos'>Sweater white</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$2899</span>
                                     <div id="precio">$2199</div>
@@ -303,7 +328,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 id='nombreProducto'>Jean mom</h5>
+                                    <h5 id='nombreProducto' category='jeans'>Jean mom</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                      <!--    <div class="bi-star-fill"></div>
@@ -366,7 +391,7 @@
                                 <div class="text-center">
                                   <img class="card-img-top" src="./Multimedia/campera hoodie.jpg" alt="..." />
                                     <!-- Product name-->
-                                    <h5 id='nombreProducto'>Hoodie Campera</h5>
+                                    <h5 id='nombreProducto' category='camperas'>Hoodie Campera</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$13200</span>
                                     <div id="precio">$10200</div>
@@ -420,7 +445,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 id='nombreProducto'>Pantalón Black Summer</h5>
+                                    <h5 id='nombreProducto' category='jeans'>Pantalón Black Summer</h5>
                                     <!-- Product price-->
                                    <div id="precio">$3600</div>
                                 </div>
@@ -473,7 +498,7 @@
                           <div class="card-body p-4">
                               <div class="text-center">
                                   <!-- Product name-->
-                                  <h5 id='nombreProducto'>Chomba negra</h5>
+                                  <h5 id='nombreProducto' category='chombas'>Chomba negra</h5>
                                   <!-- Product price-->
                                  <div id="precio">$3600</div>
                               </div>
@@ -616,7 +641,7 @@
           <div class="col-lg-12 col-sm-12 col-md-12">
              <div id="tituloCarritoNav">Carrito de compras</div>
              
-             <div class="container">
+             <!-- <div class="container">
               <div class="row">
                 <div class="col-lg-12 col-sm-12 col-md-12">
                 <table class="table">
@@ -629,8 +654,8 @@
                      <th scope="col">Cantidad</th>
                      <th scope="col">Eliminar</th>
                    </tr>
-                 </thead>
-                 <tbody class='tbody'>
+                 </thead> -->
+                 <div class='tbody'>
                    <!-- crear tr desde js -->
                  </div>
                  </tbody>
@@ -703,7 +728,7 @@
    <script src='./js-coder/animacionesJQ.js'></script>
     <!-- <script src='./js-coder/tienda.js'></script> --> 
    <script src='./js-coder/tiendaNueva.js'></script>
-   
+   <script src='./js-coder/filtros.js'></script>
    
     </body>
 
