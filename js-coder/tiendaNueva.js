@@ -10,8 +10,8 @@ botonesCompra.forEach(agregarCarritoBoton =>{
 function agregarCarrito(e){
  let boton = e.target;
  let item = boton.parentNode.parentNode.parentNode;
- let titulo = item.querySelector('#nombreProducto').textContent;
- let precio = item.querySelector('#precio').textContent;
+ let titulo = item.querySelector('.nombreProducto').textContent;
+ let precio = item.querySelector('.precio').textContent;
  let imagen = item.querySelector('img').src;
  let talle = item.querySelector('#botonTalles').value;
 

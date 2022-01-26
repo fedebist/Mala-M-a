@@ -19,7 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet"/>
     </head>
-    <body>
+    <body class='body'>
         <!-- Navigation-->
         <nav class='navNavBar'>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,8 +38,8 @@
                                 <li><a class="dropdown-item" href="#!">Más vendidos</a></li>
                                 <li><a class="dropdown-item" href="#!">Lo nuevo</a></li>
                             </ul>
-                            <li class="nav-item"><a class="nav-link" href="#!"><img src='./Multimedia/outline_dark_mode_black_24dp.png' onclick='darkMode()'></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!"><img src='./Multimedia/outline_light_mode_black_24dp.png' onclick='lightMode()'></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!"><img src='./Multimedia/outline_dark_mode_black_24dp.png' class='darkMode' onclick='darkMode()'></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!"><img src='./Multimedia/outline_light_mode_black_24dp.png' clas='lightMode' onclick='lightMode()'></a></li>
                         </li>
                       </ul>
                         </button>
@@ -124,9 +124,9 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 id="nombreProducto">Remera básica negra</h5>
+                                    <h5 class="nombreProducto">Remera básica negra</h5>
                                     <!-- Product price-->
-                                    <div id="precio">$2000</div>
+                                    <div class="precio">$2000</div>
                                 </div>
                                 <div class='botonesVer'>
                                 <button class='verMasBasica'>Ver más</button></div>
@@ -180,13 +180,13 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 id='nombreProducto' category='remeras'>Remera básica blanca</h5>
+                                    <h5 class='nombreProducto' category='remeras'>Remera básica blanca</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                     </div>
                                     <!-- Product price-->
 
-                                    <div id="precio">$2000</div>
+                                    <div class="precio">$2000</div>
                                 </div>
                                 <div class='botonesVer'>
                                   <button class='verMasBasica'>Ver más</button></div>
@@ -239,10 +239,10 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 id='nombreProducto' category='buzos'>Sweater white</h5>
+                                    <h5 class='nombreProducto' category='buzos'>Sweater white</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$2899</span>
-                                    <div id="precio">$2199</div>
+                                    <div class="precio">$2199</div>
                                     <div class='botonesVer'>
                                       <button class='verMasSweater'>Ver más</button></div>
                                       <div class='descripcionProductoSweater'>Elegante y combinable con todo tipo de outfits:  adquirí el tuyo en <strong>MM</strong></div>
@@ -295,7 +295,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 id='nombreProducto'>Jean mom</h5>
+                                    <h5 class='nombreProducto'>Jean mom</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                      <!--    <div class="bi-star-fill"></div>
@@ -305,7 +305,7 @@
                                         <div class="bi-star-fill"></div> -->
                                     </div>
                                     <!-- Product price-->
-                                    <div id="precio">$3000</div>
+                                    <div class="precio">$3000</div>
                                     <div class='botonesVer'>
                                       <button class='verMasJean'>Ver más</button></div>
                                       <div class='descripcionProductoJean'>Un clásico que este verano llega para quedarse, obtené el mejor en <strong>MM</strong></div>
@@ -358,10 +358,10 @@
                                 <div class="text-center">
                                   <img class="card-img-top" src="./Multimedia/campera hoodie.jpg" alt="..." />
                                     <!-- Product name-->
-                                    <h5 id='nombreProducto' category='camperas'>Hoodie Campera</h5>
+                                    <h5 class='nombreProducto' category='camperas'>Hoodie Campera</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">$13200</span>
-                                    <div id="precio">$10200</div>
+                                    <div class="precio">$10200</div>
                                     <div class='botonesVer'>
                                       <button class='verMasCampera'>Ver más</button></div>
                                       <div class='descripcionProductoCampera'>Sorprendé a todos el próximo invierno con la campera best seller del mercado</div>
@@ -412,9 +412,9 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 id='nombreProducto' category='jeans'>Pantalón Black Summer</h5>
+                                    <h5 class='nombreProducto' category='jeans'>Pantalón Black Summer</h5>
                                     <!-- Product price-->
-                                   <div id="precio">$3600</div>
+                                   <div class="precio">$3600</div>
                                 </div>
                                 <div class='botonesVer'>
                                   <button class='verMasPantalon'>Ver más</button></div>
@@ -465,9 +465,9 @@
                           <div class="card-body p-4">
                               <div class="text-center">
                                   <!-- Product name-->
-                                  <h5 id='nombreProducto'>Chomba negra</h5>
+                                  <h5 class='nombreProducto'>Chomba negra</h5>
                                   <!-- Product price-->
-                                 <div id="precio">$3600</div>
+                                 <div class="precio">$3600</div>
                               </div>
                               <div class='botonesVer'>
                                 <button class='verMasPantalon'>Ver más</button></div>

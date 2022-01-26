@@ -15,7 +15,7 @@ $('.categorias').click(function(){
    $('.card').css('transform', 'scale(0)');
   function ocultarProducto(){
     $('.card').hide();
-  } setTimeout(ocultarProducto, 400);
+  } setTimeout(ocultarProducto, 300);
 
 
   /* MOSTRAR PRODUCTOS */
@@ -23,7 +23,7 @@ $('.categorias').click(function(){
      function mostrarProducto(){
       $('.card[category="'+categorias+'"]').show(); 
       $('.card[category="'+categorias+'"]').css('transform', 'scale(1)');
-    } setTimeout(mostrarProducto, 400);
+    } setTimeout(mostrarProducto, 300);
   
 });
 
@@ -32,5 +32,5 @@ $('.categorias[category="all"]').click(function(){
   function mostrarTodo(){
     $('.card').show();
     $('.card').css('transform', 'scale(1)');
-  }setTimeout(mostrarTodo, 400);
+  }setTimeout(mostrarTodo, 300);
 });

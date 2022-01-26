@@ -1,7 +1,23 @@
+let toggleDark = document.querySelector('.darkMode');
+let toggleLight = document.querySelector('.lightMode');
+let cambiarTema = (e) =>{
+  if(e.target.checked){
+    document.documentElement.setAttribute('data-theme', 'oscuro');
+    console.log(e.target.checked);
+
+  }else{
+    DocumentTimeline.documentElement.setAttribute('data-theme', null);
+  }
+}
+
+let temaActual = localStorage.getItem('tema');
+
 function darkMode(){
+  localStorage.setItem('tema', 'oscuro')
+
     document.body.style.background = 'black';
 
-    /* Color título carrito */
+    /* Color título carrito */   
     $('#tituloCarritoNav').css('color', 'black');
      
     /* Fondo carrito */
@@ -26,10 +42,22 @@ function darkMode(){
     $('#tituloTotal').css('color', 'white');
 
     $('.totalCompra').css('color', 'white');
+    
+    /* CARD VERSIÓN OSCURA */
+    $('.card').css('background-color', 'black');
+    $('.card').css('border', '7px solid beige');
+    /* nombre card */
+    $('.nombreProducto').css('color', 'beige');
+    /* precio card */
+    $('.precio').css('color', 'beige')
+
+    $('.categorias').css('color', 'beige');
   }
   
   function lightMode(){
-      document.body.style.background = 'beige';
+    localStorage.setItem('tema', 'claro')
+
+     $('.body').css('background-image', 'linear-gradient(to top, beige, white)');
     
     /* Color título carrito */
     $('#tituloCarritoNav').css('color', 'black');
@@ -54,5 +82,13 @@ function darkMode(){
      $('#tituloTotal').css('color', 'grey');
 
      $('.totalCompra').css('color', 'grey');
+
+     /* CARD VERSIÓN CLARA */
+    $('.card').css('background-color', '#fff');
+    $('.card').css('border', '7px solid rgba(207, 206, 118, 0.466)');
+    /* nombre card */
+    $('.nombreProducto').css('color', 'black');
+    /* precio card */
+    $('.precio').css('color', 'black')
   }
 
