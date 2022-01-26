@@ -5546,7 +5546,7 @@ textarea.form-control-lg {
 }
 
 .modal-backdrop {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 1050;
@@ -11744,3 +11744,4 @@ textarea.form-control-lg {
 .itemActivo{
   background-color: darkkhaki;
 }
+
