@@ -38,7 +38,7 @@ let inputCantidad = tbody.getElementsByClassName('inputCantidad');
         carrito[i].cantidad ++;
         let inputValue = inputCantidad[i]
         inputValue.value++;
-        alert(`El producto ya estaba en el carrito, la cantidad ahora es ${carrito[i].cantidad} `)
+        alert(`El producto ${carrito[i].titulo.toUpperCase()} estaba en el carrito, la cantidad ahora es ${carrito[i].cantidad} `)
         /* actualizar precio si hay cambios en cantidad */
         actualizarTotal();
 

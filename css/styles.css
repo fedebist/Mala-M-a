@@ -4522,7 +4522,6 @@ textarea.form-control-lg {
   box-shadow: 10px 1px 10px rgba(0.5,0,0,0.3);
   /* animación filtrado */
   transition: all .4s;
-
 }
 .card > hr {
   margin-right: 0;
@@ -11750,4 +11749,19 @@ textarea.form-control-lg {
   color: black;
 }
 
+/* doble Imagen con hover */
+.dobleImg img:last-child{
+  display: none;
+}
 
+.dobleImg:hover img:last-child{
+  display: block;
+}
+
+.dobleImg:hover img:first-child{
+  display: none;
+}
+
+.nombreProducto{
+  font-family: 'Montserrat', sans-serif;
+}

@@ -17,3 +17,9 @@ for (let producto of productos){
     <img src='${producto.imagen} alt=''>
     <h4>${producto.precio}</h4>`)
 }
+
+$('.botonGet').click(function(){
+    $.get(productos).done (function(data){
+        console.log(data);
+    })
+})

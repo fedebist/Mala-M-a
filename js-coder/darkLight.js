@@ -90,5 +90,7 @@ function darkMode(){
     $('.nombreProducto').css('color', 'black');
     /* precio card */
     $('.precio').css('color', 'black')
+/* boton añadir al carrito */
+    $('.añadirCarrito').css('background-color', 'black');
   }
 
