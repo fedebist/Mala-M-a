@@ -38,26 +38,37 @@
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#!">Toda nuestra ropa</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Más vendidos</a></li>
-                                <li><a class="dropdown-item" href="#!">Lo nuevo</a></li>
                             </ul>
                             <li class="nav-item"><a class="nav-link" href="#!"><img src='./Multimedia/outline_dark_mode_black_24dp.png' class='darkMode' onclick='darkMode()'></a></li>
                             <li class="nav-item"><a class="nav-link" href="#!"><img src='./Multimedia/outline_light_mode_black_24dp.png' clas='lightMode' onclick='lightMode()'></a></li>
                         </li>
                       </ul>
                         </button>
-                        <ul class="nav nav-pills">
-                          <li class="nav-item">
-                            <a class="nav-link active" href="./paginas/carrito.html">Ir al carrito</a>
-                          </li>
-                        </ul>
-                        <div class="dropdown">
-                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           Carrito <span id='contador'>0</span>
-                           
-                          </button>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              
+                        <!-- MODAL CART -->
+                        <img src='./Multimedia/CART.png' class='imgCart' data-toggle='modal' data-target='#ventanaModalCart'><div data-toggle='modal' data-target='#ventanaModalCart'>Carrito de compras</div>
+                        <div class="modal fade" id='ventanaModalCart' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title modalCart">Carrito de compras</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class='tbody'></div>
+                                <h3 id='tituloTotal'>Total</h3>
+                                 <div class='totalCompra'>$0</div>
+                                <p class='carroVacio'>Tu carrito está vacío actualmente</p>
+                                
+                              </div>
+                              <div class="modal-footer">
+                              <a href='./index.html'><button class='btnVolver'>Volver a la tienda</button></a>
+                               <a href='./paginas/carrito.html'><button class='comprarCart'>Proceder a la compra</button></a>
+                              </div>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#"><div id='carritoBarraNav'></div></a>
                           </div>
                         </div> 
@@ -74,22 +85,7 @@
             </div>
         </header>
 
-        <div class="container">
-            <div class="row">
-        </div>
-        <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="./index.html">Tienda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#carritoCompras">Carrito</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./paginas/registrarme.html">Iniciar sesión</a>
-              </li>
-          </ul>
-          </div>
-        </div>
+       
 
         <!-- section Filtros -->
 
@@ -99,7 +95,7 @@
     <!-- Tienda-->
          <!-- FILTROS -->
     <section class="sectionCategorias">
-      <p class='tituloFiltrar'><img src='./Multimedia/WhatsApp Image 2022-01-25 at 02.09.14.jpeg' width='50px'> Filtrar por</p>
+      <p class='tituloFiltrar'> Filtrar por</p>
 
     </section>
      
@@ -653,13 +649,13 @@
          <img src='./Multimedia/baseline_delete_forever_black_24dp.png' onclick='borrar()'></div>
          <div class='preciosCarrito'></div>
          </section> -->
-         
+<!--          
   <section id='carritoCompras'>
 
     <div class="container">
       <div class="row">
           <div class="col-lg-12 col-sm-12 col-md-12">
-             <div id="tituloCarritoNav">Carrito de compras</div>
+             <div id="tituloCarritoNav">Carrito de compras</div> -->
              
              <!-- <div class="container">
               <div class="row">
@@ -675,7 +671,7 @@
                      <th scope="col">Eliminar</th>
                    </tr>
                  </thead> -->
-                 <div class='tbody'>
+                 
                    <!-- crear tr desde js -->
                  </div>
                  </tbody>
@@ -683,7 +679,7 @@
   
      
 
-         <div class="row mx-4">
+    <!--      <div class="row mx-4">
              <div class="col">
               <h3 id='tituloTotal'>Total</h3>
                <div class='totalCompra'>$0</div>
@@ -695,7 +691,7 @@
 
         </div>
         </div>
-
+ -->
         <!--     <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-md-12">
@@ -728,8 +724,10 @@
 
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Mala Mía Madariaga &copy; 2021</p></div>
-        </footer>
+            <div class="container"><p class="m-0 text-center text-white">
+              <a href='https://www.instagram.com/malamiamadariaga/' class='text-decoration-none' target="blank"><img src='./Multimedia/INSTAGRAM.png' width='50px'></a>
+               Mala Mía Madariaga &copy; 2021</p></div>
+          </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

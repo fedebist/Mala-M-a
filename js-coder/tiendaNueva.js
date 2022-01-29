@@ -65,10 +65,10 @@ function renderizarCarrito(){
     let contenido = `
     <div class="container">
     <div class="row">
-        <div class='col-lg-2 col-sm-3 col-3'>
+        <div class='col-lg-3 col-sm-3 col-3'>
             <img src='${item.img}' width= '100px'>
         </div>
-        <div class="col-lg-4 col-sm-5 col-5">
+        <div class="col-lg-3 col-sm-5 col-5">
         <b><h6 class='tituloTabla'>${item.titulo}</b></h6>
           <p class='mt-5 eliminarCarrito'>Eliminar producto <button class='btnBorrarCarrito'>X</button></p>
         </div>
@@ -83,6 +83,7 @@ function renderizarCarrito(){
     </div>
 </div>
        `
+       $('.carroVacio').css('display', 'none');
 /*         usar el mismo nav para que no se concatenen 
       $('#carritoBarraNav').append(`<div>${item.titulo}</div>
       <img src='${item.img}' width= '100px'>

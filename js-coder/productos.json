@@ -1,0 +1,51 @@
+{
+    "data-product" : [
+      {
+          "name": "Remera básica negra",
+          "precio": "$2000",
+          "stock": "20"
+      },
+      {
+          "name": "Remera básica blanca",
+          "precio": "$2000",
+          "stock": "15"
+      },
+      {
+          "name": "Sweater White",
+          "precio": "$2199",
+          "stock": "25"
+      },
+      {   
+        "name": "Jean mom",
+          "precio": "$3000",
+          "stock": "15"
+      },
+      {
+        "name": "Hoodie Campera",
+        "precio": "10200",
+        "stock": "10"
+      },
+      {
+        "name": "Pantalón Black Summer",
+        "precio": "$3600",
+        "stock": "10"
+      },
+      {
+        "name": "Chombra negra",
+        "precio": "$3600",
+        "stock": "25"
+      },
+      {
+        "name": "Jogger grey",
+        "precio": "$3400",
+        "stock": "15"
+      },
+      {
+        "name": "Sport short",
+        "precio": "$3000",
+        "stock": "35"
+      }
+    
+    
+    ]
+  }

@@ -5578,6 +5578,7 @@ textarea.form-control-lg {
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+  text-align: center;
 }
 
 .modal-body {
@@ -11658,8 +11659,17 @@ textarea.form-control-lg {
 /* ------------- */
 
 #productos{
-  padding: 12px;
-  background-color: white;
+  padding-top: 12px;
+  background-color: #E4E4E0;
+}
+
+.productosHome{
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 120%;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .tituloProductos{
@@ -11688,7 +11698,8 @@ textarea.form-control-lg {
 .tituloFiltrar{
   text-align: center;
   font-size: 130%;
-;
+  padding-top: 14px;
+
 }
 
 /*  */
@@ -11765,3 +11776,29 @@ textarea.form-control-lg {
 .nombreProducto{
   font-family: 'Montserrat', sans-serif;
 }
+
+.imgCart:hover{
+transform: scale(1.10);
+}
+
+.carroVacio{
+  text-align: center;
+}
+
+/* btns cart */
+.btnVolver{
+  background-color: beige;
+  color: grey;
+  border: 4px outset khaki;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.comprarCart{
+  background-color: beige;
+  color: grey;
+  border: 4px outset khaki;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+

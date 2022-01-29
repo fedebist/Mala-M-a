@@ -52,6 +52,7 @@ function darkMode(){
     $('.precio').css('color', 'beige')
 
     $('.categorias').css('color', 'beige');
+
   }
   
   function lightMode(){

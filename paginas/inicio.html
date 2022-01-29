@@ -8,6 +8,9 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,300&family=Lobster+Two&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <title>Mala Mía Madariaga - Home</title>
         <!-- cdn bs -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -36,60 +39,40 @@
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="../index.html">Toda nuestra ropa</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Más vendidos</a></li>
-                                <li><a class="dropdown-item" href="#!">Lo nuevo</a></li>
                             </ul>
                             <li class="nav-item"><a class="nav-link" href="#!"><img src='../Multimedia/outline_dark_mode_black_24dp.png' onclick='darkMode()'></a></li>
                             <li class="nav-item"><a class="nav-link" href="#!"><img src='../Multimedia/outline_light_mode_black_24dp.png' onclick='lightMode()'></a></li>
                         </li>
                       </ul>
-                        </button>
-                        <input type='text' id='barra' class='form-control my-2'>
-                        <button class='btn btn-info' id='botonBusqueda'>Buscar</button>
-                        <ul id='resultado'>
-                        </ul>
-                        <div class="containerContador">
-                        <div class="dropdown">
-                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           Carrito <span id='contador'>0</span>
-                          </button>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#"><table class="table table-dark">
-                              <thead>
-                                <tr>
-                                  <th scope="col">#</th>
-                                  <th scope="col">Producto</th>
-                                  <th scope="col">Precio</th>
-                                  <th scope="col">Total</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">1</th>
-                                  <td><div id='añadidoNav'></div></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">3</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                              </tbody>
-                            </table></a>
-                          </div>
-                        </div> 
-                    </form>
-                </div>
-            </div>
+                               <!-- MODAL CART -->
+                               <img src='../Multimedia/CART.png' class='imgCart' data-toggle='modal' data-target='#ventanaModalCart'><div data-toggle='modal' data-target='#ventanaModalCart'>Carrito de compras</div>
+                               <div class="modal fade" id='ventanaModalCart' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                                 <div class="modal-dialog" role="document">
+                                   <div class="modal-content">
+                                     <div class="modal-header">
+                                       <h5 class="modal-title modalCart">Carrito de compras</h5>
+                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                         <span aria-hidden="true">&times;</span>
+                                       </button>
+                                     </div>
+                                     <div class="modal-body">
+                                       <div class='tbody'></div>
+                                       <h3 id='tituloTotal'>Total</h3>
+                                        <div class='totalCompra'>$0</div>
+                                       <p class='carroVacio'>Tu carrito está vacío actualmente</p>
+                                       
+                                     </div>
+                                     <div class="modal-footer">
+                                     <a href='../index.html'><button class='btnVolver'>Volver a la tienda</button></a>
+                                      <a href='../paginas/carrito.html'><button class='comprarCart'>Proceder a la compra</button></a>
+                                     </div>
+       
+                               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                   <a class="dropdown-item" href="#"><div id='carritoBarraNav'></div></a>
+                                 </div>
+                               </div> 
+                       </div>
+                       
         </nav>
         </nav>
         <!-- Header-->
@@ -97,7 +80,7 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Mala Mía</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Catálogo</p>
+                    <p class="lead fw-normal text-white-50 mb-0">Home</p>
                 </div>
             </div>
         </header>
@@ -156,58 +139,30 @@
         <div class="container">
           <div class="row">
            
-            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Chombas & camisas</h5>
-                  <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12 mt-3">
+             <a href='../index.html'><img src='../Multimedia/Remeras y chombas.png' width='600px'></a>
+             <div class='productosHome'>Remeras, chombas, camisas</div>
+             </div>
            
-            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Remeras</h5>
-                  <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12 mt-3">
+            <a href='../index.html'><img src='../Multimedia/buzos y conjuntos.png' width='600px'></a>
+            <div class='productosHome'>Buzos, conjuntos, camperas</div>
             </div>
           
-            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Buzos & conjuntos</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12 mt-3">
+            <a href='../index.html'><img src='../Multimedia/bottoms.png' width='600px'></a>
+            <div class='productosHome'>Jeans, joggers, cargos</div>
           </div>
-          
-          <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Jeans & Joggers</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
+  
 
         </section>
 
 
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Mala Mía Madariaga &copy; 2021</p></div>
+            <div class="container"><p class="m-0 text-center text-white">
+              <a href='https://www.instagram.com/malamiamadariaga/' class='text-decoration-none' target="blank"><img src='../Multimedia/INSTAGRAM.png' width='50px'></a>
+              Mala Mía Madariaga &copy; 2021</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -225,8 +180,7 @@
    <script src='../js-coder/barra.js'></script>
    <script src='../js-coder/darkLight.js'></script>
    <script src='../js-coder/animacionesJQ.js'></script>
-   <script src='../js-coder/tienda.js'></script>
-   
+   <script src='../js-coder/tiendaNueva.js'></script>
    
     </body>
 
