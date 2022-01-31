@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Mala Mía Madariaga: catálogo. Vestí a la moda con las prendas del verano 2022" />
+        <meta name='keywords' content='Mala mía, madariaga, catálogo, pinamar, ropa, verano 2022'>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <title>Mala Mía Madariaga - Catálogo</title>
+        <!-- cdn bs -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+        <!-- FONT Cards -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="../css/styles.css" rel="stylesheet"/>
+    </head>
+    <body class='body'>
+        <!-- Navigation-->
+        <nav class='navNavBar'>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="./paginas/inicio.html">Mala Mía Madariaga</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./paginas/inicio.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Nosotros</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">Toda nuestra ropa</a></li>
+                            </ul>
+                            <li class="nav-item"><a class="nav-link" href="#!"><img src='./Multimedia/outline_dark_mode_black_24dp.png' class='darkMode' onclick='darkMode()'></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!"><img src='./Multimedia/outline_light_mode_black_24dp.png' clas='lightMode' onclick='lightMode()'></a></li>
+                        </li>
+                      </ul>
+                        </button>
+              
+                        <!-- MODAL CART -->
+                        <img src='./Multimedia/CART.png' class='imgCart' data-toggle='modal' data-target='#ventanaModalCart'><div data-toggle='modal' data-target='#ventanaModalCart'>Carrito de compras</div>
+                        <div class="modal fade" id='ventanaModalCart' tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden='true'>
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title modalCart">Carrito de compras</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class='tbody'></div>
+                                <h3 id='tituloTotal'>Total</h3>
+                                 <div class='totalCompra'>$0</div>
+                                <p class='carroVacio'>Tu carrito está vacío actualmente</p>
+                                
+                              </div>
+                              <div class="modal-footer">
+                              <a href='./index.html'><button class='btnVolver'>Volver a la tienda</button></a>
+                               <a href='./paginas/carrito.html'><button class='comprarCart'>Proceder a la compra</button></a>
+                              </div>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"><div id='carritoBarraNav'></div></a>
+                          </div>
+                        </div> 
+                </div>
+        </nav>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Mala Mía</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Catálogo</p>
+                </div>
+            </div>
+        </header>
+
+     <div id='detalleProducto'></div>
+       
+
+
+   
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">
+              <a href='https://www.instagram.com/malamiamadariaga/' class='text-decoration-none' target="blank"><img src='./Multimedia/INSTAGRAM.png' width='50px'></a>
+               Mala Mía Madariaga &copy; 2021</p></div>
+          </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+        <!-- JS -->
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- <script src='./js-coder/ajax.js'></script>
+<script src='./js-coder/variablesGenerales.js'></script>
+   <script src='./js-coder/funcionesGenerales.js'></script> -->
+   <script src='../js-coder/darkLight.js'></script>
+   <script src='../js-coder/tiendaNueva.js'></script>
+   <script src='../js-coder/filtros.js'></script>
+   <script src='../js-coder/variablesGenerales.js'></script>
+   <script src='../js-coder/verMas.js'></script>
+   
+   
+    </body>
+
+
+
+</html>

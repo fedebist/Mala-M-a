@@ -11349,7 +11349,7 @@ textarea.form-control-lg {
 }
 
 .close{
-  color: green;
+  color: grey;
   font-size: 110%;
   font-family: 'Source Serif Pro', serif;
 }
@@ -11393,16 +11393,7 @@ textarea.form-control-lg {
   justify-content: center;
 }
 
-
-.descripcionProductoBasica{
-  font-size: 105%;
-  text-align: center;
-  display: none;
-  background-color: beige;
-  border: 4px outset grey;
-}
-
-.verMasBasica{
+.verMas{
   background-color: grey;
   color: white;
   height: 40px;
@@ -11411,110 +11402,10 @@ textarea.form-control-lg {
   box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
 }
 
-.verMasBasica:hover{
+.verMas:hover{
   background-color: black;
   box-shadow: 10px 1px 10px rgba(0.5,0,0,0.4);
   transform: translateX(-1%);
-}
-
-.descripcionProductoSweater{
-  font-size: 105%;
-  text-align: center;
-  display: none;
-  background-color: beige;
-  border: 4px outset grey;
-}
-
-.verMasSweater{
-  background-color: grey;
-  color: white;
-  height: 40px;
-  border: 4px outset grey;
-  border-radius: 15px;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-}
-
-.verMasSweater:hover{
-  background-color: black;
-  box-shadow: 10px 1px 10px rgba(0.5,0,0,0.4);
-  transform: translateX(-1%);
-}
-
-.descripcionProductoJean{
-  font-size: 105%;
-  text-align: center;
-  display: none;
-  background-color: beige;
-  border: 4px outset grey;
-}
-
-.verMasJean{
-  background-color: grey;
-  color: white;
-  height: 40px;
-  border: 4px outset grey;
-  border-radius: 15px;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-}
-
-.verMasJean:hover{
-  background-color: black;
-  box-shadow: 10px 1px 10px rgba(0.5,0,0,0.4);
-  transform: translateX(-1%);
-}
-
-.descripcionProductoCampera{
-  font-size: 105%;
-  text-align: center;
-  display: none;
-  background-color: beige;
-  border: 4px outset grey;
-}
-
-.verMasCampera{
-  background-color: grey;
-  color: white;
-  height: 40px;
-  border: 4px outset grey;
-  border-radius: 15px;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-}
-
-.verMasCampera:hover{
-  background-color: black;
-  box-shadow: 10px 1px 10px rgba(0.5,0,0,0.4);
-  transform: translateX(-1%);
-}
-
-.descripcionProductoPantalon{
-  font-size: 105%;
-  text-align: center;
-  display: none;
-  background-color: beige;
-  border: 4px outset grey;
-}
-
-.verMasPantalon{
-  background-color: grey;
-  color: white;
-  height: 40px;
-  border: 4px outset grey;
-  border-radius: 15px;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-}
-
-.verMasPantalon:hover{
-  background-color: black;
-  box-shadow: 10px 1px 10px rgba(0.5,0,0,0.4);
-  transform: translateX(-1%);
-}
-
-.sectionStock{
-  background-color: grey;
-}
-
-.consulta{
-  text-align: center;
 }
 
 .añadirCarrito{
@@ -11802,3 +11693,10 @@ transform: scale(1.10);
   box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
+#mostrarAjax{
+  font-size: 10%;
+}
+
+.consultarStock{
+  text-align: center;
+}

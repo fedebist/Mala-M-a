@@ -1,5 +1,4 @@
-{
-    "data-product" : [
+ [
       {
           "name": "Remera básica negra",
           "precio": "$2000",
@@ -45,7 +44,4 @@
         "precio": "$3000",
         "stock": "35"
       }
-    
-    
     ]
-  }
