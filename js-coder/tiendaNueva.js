@@ -1,7 +1,26 @@
 let botonesCompra = document.querySelectorAll('.añadirCarrito');
 let carrito = [ ]
 let tbody = document.querySelector('.tbody');
+/* ================================================= */
+let botonesEnvio = document.querySelectorAll('.envios');
 
+botonesEnvio.forEach(btnEnvio=>{
+    btnEnvio.addEventListener('click', agregarPina)
+});
+
+function agregarPina(e){
+    let precioEnvio = 310;
+    if(e.target){
+        tbody.innerHTML = '';
+        tbody.append(`
+         Compra realizada. Pronto nos contactaremos para confirmar
+         la entrega. ¡Gracias!
+        `
+        )
+        carrito = [ ];
+        actualizarTotal();
+    }
+} 
 
 botonesCompra.forEach(agregarCarritoBoton =>{
     agregarCarritoBoton.addEventListener('click', agregarCarrito);
@@ -115,7 +134,7 @@ function actualizarTotal(){
     carrito.forEach((item)=>{
         /* reemplazar signo $ por string vacío */
         let precio = Number(item.precio.replace('$', ''));
-        total = total + precio* item.cantidad;
+        total = total + precio* item.cantidad ;
     })
 
    totalHTML.innerHTML = `$${total.toFixed(2)}`;
