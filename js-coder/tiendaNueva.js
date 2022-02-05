@@ -13,15 +13,16 @@ function agregarPina(e){
     if(e.target){
         tbody.innerHTML = '';
         tbody.append(`
-         Compra realizada. Pronto nos contactaremos para confirmar
-         la entrega. ¡Gracias!
+        Compra realizada. Pronto nos contactaremos para confirmar
+         la entrega. ¡Gracias por comprar en Mala Mía!
         `
-        )
+        );
         carrito = [ ];
         actualizarTotal();
     }
 } 
 
+/* ======================================= */
 botonesCompra.forEach(agregarCarritoBoton =>{
     agregarCarritoBoton.addEventListener('click', agregarCarrito);
 });

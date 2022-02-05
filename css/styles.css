@@ -11696,3 +11696,9 @@ transform: scale(1.10);
 .consultarStock{
   text-align: center;
 }
+
+.mensajeCompra{
+  text-align: center;
+  font-size: 110%;
+  color: grey;
+}
